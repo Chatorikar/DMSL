@@ -1,0 +1,643 @@
+mllab04@mllab04:~$ sudo mysql -u root -p
+[sudo] password for mllab04: 
+Enter password: 
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 2
+Server version: 5.7.26-0ubuntu0.18.04.1 (Ubuntu)
+
+Copyright (c) 2000, 2019, Oracle and/or its affiliates. All rights reserved.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> show databases
+    -> ;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| EMP                |
+| Hotel              |
+| NHL                |
+| Order_Managment    |
+| Practice           |
+| Sampledb           |
+| Test               |
+| company            |
+| hotel              |
+| mysql              |
+| order_managment    |
+| performance_schema |
+| resutrants         |
+| student            |
+| sys                |
++--------------------+
+16 rows in set (0.06 sec)
+
+mysql> use Order_Managment;
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Database changed
+mysql> show tables;
++---------------------------+
+| Tables_in_Order_Managment |
++---------------------------+
+| Category                  |
+| Customer                  |
+| Order_Details             |
+| Product                   |
++---------------------------+
+4 rows in set (0.00 sec)
+
+mysql> into into `Category` (
+    -> ;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'into into `Category` (' at line 1
+mysql> 
+mysql> desc Customer
+    -> ;
++-------------+-------------+------+-----+---------+----------------+
+| Field       | Type        | Null | Key | Default | Extra          |
++-------------+-------------+------+-----+---------+----------------+
+| Name        | varchar(50) | NO   |     | NULL    |                |
+| Customer_id | int(11)     | NO   | PRI | NULL    | auto_increment |
+| Email_id    | varchar(30) | YES  |     | NULL    |                |
+| Phone_no    | int(11)     | YES  |     | NULL    |                |
+| DOB         | date        | YES  |     | NULL    |                |
++-------------+-------------+------+-----+---------+----------------+
+5 rows in set (0.00 sec)
+
+mysql> selet * from Customer
+    -> ;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'selet * from Customer' at line 1
+mysql> select * from Customer
+    -> ;
+Empty set (0.00 sec)
+
+mysql> into into `Category` 
+    -> (;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'into into `Category` 
+(' at line 1
+mysql> desc Category;
++-------------+-------------+------+-----+---------+----------------+
+| Field       | Type        | Null | Key | Default | Extra          |
++-------------+-------------+------+-----+---------+----------------+
+| Name        | varchar(50) | NO   |     | NULL    |                |
+| Category_id | int(11)     | NO   | PRI | NULL    | auto_increment |
++-------------+-------------+------+-----+---------+----------------+
+2 rows in set (0.00 sec)
+
+mysql> into into `Category`  (Name,Category_id) values (Cricket,1);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'into into `Category`  (Name,Category_id) values (Cricket,1)' at line 1
+mysql> inSERT into `Category`  (Name,Category_id) values (Cricket,1);
+ERROR 1054 (42S22): Unknown column 'Cricket' in 'field list'
+mysql> insert into `Category`  (Name,Category_id) values (Cricket,1);
+ERROR 1054 (42S22): Unknown column 'Cricket' in 'field list'
+mysql> insert into `Category`(Name,Category_id) values (Cricket,1);
+ERROR 1054 (42S22): Unknown column 'Cricket' in 'field list'
+mysql> insert into `Category`(`Name`,`Category_id`) values(`Cricket`,`1`);
+ERROR 1054 (42S22): Unknown column 'Cricket' in 'field list'
+mysql> insert into Category(`Name`,`Category_id`) values(`Cricket`,`1`);
+ERROR 1054 (42S22): Unknown column 'Cricket' in 'field list'
+mysql> insert into Category(`Name`) values(`Cricket`);
+ERROR 1054 (42S22): Unknown column 'Cricket' in 'field list'
+mysql> insert into Category(Name,Category_id) values(`Cricket`,`1`);
+ERROR 1054 (42S22): Unknown column 'Cricket' in 'field list'
+mysql> insert into Category(Name,Category_id) values(`Cricket`,1);
+ERROR 1054 (42S22): Unknown column 'Cricket' in 'field list'
+mysql> insert into Category(Name,Category_id) values('Cricket',1);
+ERROR 1062 (23000): Duplicate entry '1' for key 'PRIMARY'
+mysql> insert into Category(Name) values('Cricket');
+Query OK, 1 row affected (0.03 sec)
+
+mysql> select * from Customer
+    -> ;
+Empty set (0.00 sec)
+
+mysql> select * from Category;
++----------+-------------+
+| Name     | Category_id |
++----------+-------------+
+| Swimming |           1 |
+| Cricket  |           2 |
++----------+-------------+
+2 rows in set (0.00 sec)
+
+mysql> insert into Category(Name) values('Football');
+Query OK, 1 row affected (0.04 sec)
+
+mysql> insert into Category(Name) values('BasketBall');
+Query OK, 1 row affected (0.03 sec)
+
+mysql> select * from Category;
++------------+-------------+
+| Name       | Category_id |
++------------+-------------+
+| Swimming   |           1 |
+| Cricket    |           2 |
+| Football   |           3 |
+| BasketBall |           4 |
++------------+-------------+
+4 rows in set (0.00 sec)
+
+mysql> insert into Category(Name) values('BaseBall');
+Query OK, 1 row affected (0.04 sec)
+
+mysql> insert into Category(Name) values('WaterPolo');
+Query OK, 1 row affected (0.04 sec)
+
+mysql> select * from Category;
++------------+-------------+
+| Name       | Category_id |
++------------+-------------+
+| Swimming   |           1 |
+| Cricket    |           2 |
+| Football   |           3 |
+| BasketBall |           4 |
+| BaseBall   |           5 |
+| WaterPolo  |           6 |
++------------+-------------+
+6 rows in set (0.00 sec)
+
+mysql> desc Product;
++-------------+-------------+------+-----+---------+----------------+
+| Field       | Type        | Null | Key | Default | Extra          |
++-------------+-------------+------+-----+---------+----------------+
+| Product_id  | int(11)     | NO   | PRI | NULL    | auto_increment |
+| Customer_id | int(11)     | YES  |     | NULL    |                |
+| Category_id | int(11)     | YES  | MUL | NULL    |                |
+| Category    | varchar(50) | YES  |     | NULL    |                |
+| Name        | varchar(50) | YES  |     | NULL    |                |
+| Stock       | int(11)     | YES  |     | NULL    |                |
+| Rate        | int(11)     | YES  |     | NULL    |                |
++-------------+-------------+------+-----+---------+----------------+
+7 rows in set (0.01 sec)
+
+mysql> desc Customer;
++-------------+-------------+------+-----+---------+----------------+
+| Field       | Type        | Null | Key | Default | Extra          |
++-------------+-------------+------+-----+---------+----------------+
+| Name        | varchar(50) | NO   |     | NULL    |                |
+| Customer_id | int(11)     | NO   | PRI | NULL    | auto_increment |
+| Email_id    | varchar(30) | YES  |     | NULL    |                |
+| Phone_no    | int(11)     | YES  |     | NULL    |                |
+| DOB         | date        | YES  |     | NULL    |                |
++-------------+-------------+------+-----+---------+----------------+
+5 rows in set (0.00 sec)
+
+mysql> insert into Category(Name , Email_id , Phone_no , DOB) values('Prathamesh' ,'pratham@gamil.com' , 9595666570 , '19-02-1999);
+    '> ;
+    '> insert into Category(Name , Email_id , Phone_no , DOB) values('Prathamesh' ,'pratham@gamil.com' , 9595666570 , 19-02-1999);
+    '> ;
+    '> ;
+    '> insert into Category(Name , Email_id , Phone_no , DOB) values('Prathamesh' ,'pratham@gamil.com' , 9595666570 , '19-02-1999');
+    '> ;
+    '> ;
+    '> insert into Category(Name , Customer_id ,  Email_id , Phone_no , DOB) values('Prathamesh' , 1 , 'pratham@gamil.com' , 9595666570 , '19-02-1999');
+    '> ;
+    '> insert into Category(Name , Customer_id ,  Email_id , Phone_no , DOB) values('Prathamesh' , 1 , 'pratham@gamil.com' , 9595666570 , '1999-19-02');
+    '> ;
+    '> insert into Customer(Name , Customer_id ,  Email_id , Phone_no , DOB) values('Prathamesh' , 1 , 'pratham@gamil.com' , 9595666570 , '1999-19-02');
+    '> insert into Customer(Name , Customer_id ,  Email_id , Phone_no , DOB) values    '> insert into Customer(Name , Customer_id ,  Email_id , Phone_no , DOB) values('Prathamesh' , 1 , 'pratham@gamil.com' , 9595666570 ,STR_TO_DATE('15-08-1947'));
+    '> ;
+    '> insert into Cutomer(Name , Customer_id , Email_id , Phone_no , DOB ) values ('Prathamesh',1,'pratham@gmail.com' , 9595666570 , STR_TO_DATE('15-08-1947'));
+    '> ;
+    '> insert into Cutomer(Name , Customer_id , Email_id , Phone_no , DOB ) values ('Prathamesh',1,'pratham@gmail.com' , 9595666570 , ,STR_TO_DATE('24-May-2005', '%d-%M-%Y'));
+    '> insert into Cutomer(Name , Customer_id , Email_id , Phone_no , DOB ) values ('Prathamesh',1,'pratham@gmail.com' , 9595666570 ,'15-08-1947');
+    '> ';
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Prathamesh' ,'pratham@gamil.com' , 9595666570 , 19-02-1999);
+;
+;
+insert into Cat' at line 1
+mysql> insert into Cutomer(Name , Customer_id , Email_id , Phone_no , DOB ) values ('Prathamesh',1,'pratham@gmail.com' , 9595666570 , ,STR_TO_DATE('24-May-2005', '%d-%M-%Y'));
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'STR_TO_DATE('24-May-2005', '%d-%M-%Y'))' at line 1
+mysql> insert into Cutomer(Name , Customer_id , Email_id , Phone_no , DOB ) values ('Prathamesh',1,'pratham@gmail.com' , 9595666570 , STR_TO_DATE('24-May-2005', '%d-%M-%Y'));   
+ERROR 1146 (42S02): Table 'Order_Managment.Cutomer' doesn't exist
+mysql> select * from Cutomer;
+ERROR 1146 (42S02): Table 'Order_Managment.Cutomer' doesn't exist
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| EMP                |
+| Hotel              |
+| NHL                |
+| Order_Managment    |
+| Practice           |
+| Sampledb           |
+| Test               |
+| company            |
+| hotel              |
+| mysql              |
+| order_managment    |
+| performance_schema |
+| resutrants         |
+| student            |
+| sys                |
++--------------------+
+16 rows in set (0.00 sec)
+
+mysql> use Order_Managment;
+Database changed
+mysql> select * from Cutomer;
+ERROR 1146 (42S02): Table 'Order_Managment.Cutomer' doesn't exist
+mysql> select * from Customer;
+Empty set (0.00 sec)
+
+mysql> insert into Customer(Name , Customer_id , Email_id , Phone_no , DOB ) values ('Prathamesh',1,'pratham@gmail.com' , 9595666570 , STR_TO_DATE('24-May-2005', '%d-%M-%Y'));
+ERROR 1264 (22003): Out of range value for column 'Phone_no' at row 1
+mysql> insert into Customer(Name , Customer_id , Email_id , Phone_no , DOB ) values ('Prathamesh',1,'pratham@gmail.com' , 95956665 , STR_TO_DATE('24-May-2005', '%d-%M-%Y'));
+Query OK, 1 row affected (0.04 sec)
+
+mysql> insert into Customer(Name , Email_id , Phone_no , DOB ) values ('Jitendra','Jitendra@gmail.com' , 9371346 , STR_TO_DATE('12-08-1975', '%d-%M-%Y')); 
+ERROR 1411 (HY000): Incorrect datetime value: '12-08-1975' for function str_to_date
+mysql> insert into Customer(Name , Email_id , Phone_no , DOB ) values ('Jitendra','Jitendra@gmail.com' , 9371346 , STR_TO_DATE('12-may-1975', '%d-%M-%Y'));
+Query OK, 1 row affected (0.03 sec)
+
+mysql> insert into Customer(Name , Email_id , Phone_no , DOB ) values ('Yash','Yash@gmail.com' , 9371346 , STR_TO_DATE('12-Aug-1915', '%d-%M-%Y'));
+Query OK, 1 row affected (0.04 sec)
+
+mysql> select * from Customer;
++------------+-------------+--------------------+----------+------------+
+| Name       | Customer_id | Email_id           | Phone_no | DOB        |
++------------+-------------+--------------------+----------+------------+
+| Prathamesh |           1 | pratham@gmail.com  | 95956665 | 2005-05-24 |
+| Jitendra   |           2 | Jitendra@gmail.com |  9371346 | 1975-05-12 |
+| Yash       |           3 | Yash@gmail.com     |  9371346 | 1915-08-12 |
++------------+-------------+--------------------+----------+------------+
+3 rows in set (0.00 sec)
+
+mysql> slect name,Dob from Customer
+    -> ;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'slect name,Dob from Customer' at line 1
+mysql> select name,Dob from Customer
+    -> ;
++------------+------------+
+| name       | Dob        |
++------------+------------+
+| Prathamesh | 2005-05-24 |
+| Jitendra   | 1975-05-12 |
+| Yash       | 1915-08-12 |
++------------+------------+
+3 rows in set (0.00 sec)
+
+mysql> update Customer 
+    -> set 
+    -> Phone_no = 123456
+    -> where 
+    -> Name = 'Prathamesh'l
+    -> Name = 'Prathamesh';
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'l
+Name = 'Prathamesh'' at line 5
+mysql> update Customer  set  Phone_no = 123456 where  Name = 'Prathamesh;
+    '> '
+    -> ;
+Query OK, 0 rows affected (0.01 sec)
+Rows matched: 0  Changed: 0  Warnings: 0
+
+mysql> select * from Customer;                                                     +------------+-------------+--------------------+----------+------------+
+| Name       | Customer_id | Email_id           | Phone_no | DOB        |
++------------+-------------+--------------------+----------+------------+
+| Prathamesh |           1 | pratham@gmail.com  | 95956665 | 2005-05-24 |
+| Jitendra   |           2 | Jitendra@gmail.com |  9371346 | 1975-05-12 |
+| Yash       |           3 | Yash@gmail.com     |  9371346 | 1915-08-12 |
++------------+-------------+--------------------+----------+------------+
+3 rows in set (0.00 sec)
+
+mysql> update Customer set  Phone_no = 123456 where Name = 'Prathamesh';           ';
+Query OK, 1 row affected (0.04 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+    '> '
+    -> ;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '';
+'' at line 1
+mysql> update Customer set  Phone_no = 123456 where Name = 'Prathamesh';
+Query OK, 0 rows affected (0.03 sec)
+Rows matched: 1  Changed: 0  Warnings: 0
+
+mysql> select * from Customer;
++------------+-------------+--------------------+----------+------------+
+| Name       | Customer_id | Email_id           | Phone_no | DOB        |
++------------+-------------+--------------------+----------+------------+
+| Prathamesh |           1 | pratham@gmail.com  |   123456 | 2005-05-24 |
+| Jitendra   |           2 | Jitendra@gmail.com |  9371346 | 1975-05-12 |
+| Yash       |           3 | Yash@gmail.com     |  9371346 | 1915-08-12 |
++------------+-------------+--------------------+----------+------------+
+3 rows in set (0.00 sec)
+
+mysql> update Customer set  Phone_no = 1234567 where Name = 'Prathamesh';
+Query OK, 1 row affected (0.03 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> select * from Customer;
++------------+-------------+--------------------+----------+------------+
+| Name       | Customer_id | Email_id           | Phone_no | DOB        |
++------------+-------------+--------------------+----------+------------+
+| Prathamesh |           1 | pratham@gmail.com  |  1234567 | 2005-05-24 |
+| Jitendra   |           2 | Jitendra@gmail.com |  9371346 | 1975-05-12 |
+| Yash       |           3 | Yash@gmail.com     |  9371346 | 1915-08-12 |
++------------+-------------+--------------------+----------+------------+
+3 rows in set (0.00 sec)
+
+mysql> desc product
+    -> ;
+ERROR 1146 (42S02): Table 'Order_Managment.product' doesn't exist
+mysql> desc product
+    -> desc Product
+    -> ;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'desc Product' at line 2
+mysql> show tables;
++---------------------------+
+| Tables_in_Order_Managment |
++---------------------------+
+| Category                  |
+| Customer                  |
+| Order_Details             |
+| Product                   |
++---------------------------+
+4 rows in set (0.00 sec)
+
+mysql> desc Product;
++-------------+-------------+------+-----+---------+----------------+
+| Field       | Type        | Null | Key | Default | Extra          |
++-------------+-------------+------+-----+---------+----------------+
+| Product_id  | int(11)     | NO   | PRI | NULL    | auto_increment |
+| Customer_id | int(11)     | YES  |     | NULL    |                |
+| Category_id | int(11)     | YES  | MUL | NULL    |                |
+| Category    | varchar(50) | YES  |     | NULL    |                |
+| Name        | varchar(50) | YES  |     | NULL    |                |
+| Stock       | int(11)     | YES  |     | NULL    |                |
+| Rate        | int(11)     | YES  |     | NULL    |                |
++-------------+-------------+------+-----+---------+----------------+
+7 rows in set (0.00 sec)
+
+mysql> insert into Customer(Name , Email_id , Phone_no , DOB ) values ('Jitendra','Jitendra@gmail.com' , 9371346 , STR_TO_DATE('12-may-1975', '%d-%M-%Y'));
+mysql> insert into Customer(Name , Email_id , Phone_no , DOB ) values ('Jitendra','Jitendra@gmail.com' , 9371346 , STR_TO_DATE('12-may-1975', '%d-%M-%Y'));;
+Query OK, 1 row affected (0.03 sec)
+
+ERROR: 
+No query specified
+
+mysql> alter table
+    -> alter table Product 
+    -> drop column Customer_id;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'alter table Product 
+drop column Customer_id' at line 2
+mysql> desc Product
+    -> ;
++-------------+-------------+------+-----+---------+----------------+
+| Field       | Type        | Null | Key | Default | Extra          |
++-------------+-------------+------+-----+---------+----------------+
+| Product_id  | int(11)     | NO   | PRI | NULL    | auto_increment |
+| Customer_id | int(11)     | YES  |     | NULL    |                |
+| Category_id | int(11)     | YES  | MUL | NULL    |                |
+| Category    | varchar(50) | YES  |     | NULL    |                |
+| Name        | varchar(50) | YES  |     | NULL    |                |
+| Stock       | int(11)     | YES  |     | NULL    |                |
+| Rate        | int(11)     | YES  |     | NULL    |                |
++-------------+-------------+------+-----+---------+----------------+
+7 rows in set (0.01 sec)
+
+mysql> alter table alter table Product  drop column Customer_id;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'alter table Product  drop column Customer_id' at line 1
+mysql> alter table Product  drop column Customer_id;
+Query OK, 0 rows affected (0.45 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> desc Product;
++-------------+-------------+------+-----+---------+----------------+
+| Field       | Type        | Null | Key | Default | Extra          |
++-------------+-------------+------+-----+---------+----------------+
+| Product_id  | int(11)     | NO   | PRI | NULL    | auto_increment |
+| Category_id | int(11)     | YES  | MUL | NULL    |                |
+| Category    | varchar(50) | YES  |     | NULL    |                |
+| Name        | varchar(50) | YES  |     | NULL    |                |
+| Stock       | int(11)     | YES  |     | NULL    |                |
+| Rate        | int(11)     | YES  |     | NULL    |                |
++-------------+-------------+------+-----+---------+----------------+
+6 rows in set (0.00 sec)
+
+mysql> alter table Product  drop column Category;
+Query OK, 0 rows affected (0.44 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> desc product;
+ERROR 1146 (42S02): Table 'Order_Managment.product' doesn't exist
+mysql> desc Product;
++-------------+-------------+------+-----+---------+----------------+
+| Field       | Type        | Null | Key | Default | Extra          |
++-------------+-------------+------+-----+---------+----------------+
+| Product_id  | int(11)     | NO   | PRI | NULL    | auto_increment |
+| Category_id | int(11)     | YES  | MUL | NULL    |                |
+| Name        | varchar(50) | YES  |     | NULL    |                |
+| Stock       | int(11)     | YES  |     | NULL    |                |
+| Rate        | int(11)     | YES  |     | NULL    |                |
++-------------+-------------+------+-----+---------+----------------+
+5 rows in set (0.00 sec)
+
+mysql> insert into Product(Category_id,Name,Stock,Rate) values (1,AramPads,10,1200);
+ERROR 1054 (42S22): Unknown column 'AramPads' in 'field list'
+mysql> insert into Product(Category_id,Name,Stock,Rate) values (1,'AramPads',10,1200);
+Query OK, 1 row affected (0.04 sec)
+
+mysql> select * from Product;
++------------+-------------+----------+-------+------+
+| Product_id | Category_id | Name     | Stock | Rate |
++------------+-------------+----------+-------+------+
+|          1 |           1 | AramPads |    10 | 1200 |
++------------+-------------+----------+-------+------+
+1 row in set (0.00 sec)
+
+mysql> insert into Product(Category_id,Name,Stock,Rate) values (9,'AramPads',10,1200);
+Query OK, 1 row affected (0.03 sec)
+
+mysql> select * from Product;                                                      +------------+-------------+----------+-------+------+
+| Product_id | Category_id | Name     | Stock | Rate |
++------------+-------------+----------+-------+------+
+|          1 |           1 | AramPads |    10 | 1200 |
+|          2 |           9 | AramPads |    10 | 1200 |
++------------+-------------+----------+-------+------+
+2 rows in set (0.00 sec)
+
+mysql> select * from Category;
++------------+-------------+
+| Name       | Category_id |
++------------+-------------+
+| Swimming   |           1 |
+| Cricket    |           2 |
+| Football   |           3 |
+| BasketBall |           4 |
+| BaseBall   |           5 |
+| WaterPolo  |           6 |
++------------+-------------+
+6 rows in set (0.00 sec)
+
+mysql> desc Product;                                                               +-------------+-------------+------+-----+---------+----------------+
+| Field       | Type        | Null | Key | Default | Extra          |
++-------------+-------------+------+-----+---------+----------------+
+| Product_id  | int(11)     | NO   | PRI | NULL    | auto_increment |
+| Category_id | int(11)     | YES  | MUL | NULL    |                |
+| Name        | varchar(50) | YES  |     | NULL    |                |
+| Stock       | int(11)     | YES  |     | NULL    |                |
+| Rate        | int(11)     | YES  |     | NULL    |                |
++-------------+-------------+------+-----+---------+----------------+
+5 rows in set (0.00 sec)
+
+mysql> drop table Product;
+Query OK, 0 rows affected (0.14 sec)
+
+mysql> create table if not exists Product(
+    -> Product_id int auto_increment
+    -> Foreign key (Category_id) references Category(Category_id));
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Foreign key (Category_id) references Category(Category_id))' at line 3
+mysql> create table if not exists Product( Product_id int auto_increment Foreign key (Category_id) references Category(Category_id));
+mysql> create table Product( Product_id int auto_increment Foreign key (Category_id) references Category(Category_id));
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Foreign key (Category_id) references Category(Category_id))' at line 1
+mysql> create table Product( Product_id int auto_increment , Name varchar(50) not null , Rate int not null , Stock int not null , PRIMARY KEY (Product_id));
+Query OK, 0 rows affected (0.21 sec)
+
+mysql> desc Product;
++------------+-------------+------+-----+---------+----------------+
+| Field      | Type        | Null | Key | Default | Extra          |
++------------+-------------+------+-----+---------+----------------+
+| Product_id | int(11)     | NO   | PRI | NULL    | auto_increment |
+| Name       | varchar(50) | NO   |     | NULL    |                |
+| Rate       | int(11)     | NO   |     | NULL    |                |
+| Stock      | int(11)     | NO   |     | NULL    |                |
++------------+-------------+------+-----+---------+----------------+
+4 rows in set (0.00 sec)
+
+mysql> alter table Product add constraint Category_id foreign key (Category_id) REFERENCES Category(Category_id);
+ERROR 1072 (42000): Key column 'Category_id' doesn't exist in table
+mysql> alter table Product add column Category_id int after Stock;
+Query OK, 0 rows affected (0.41 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> alter table Product add constraint Category_id foreign key (Category_id) REFERENCES Category(Category_id);
+Query OK, 0 rows affected (0.73 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> desc Product;
++-------------+-------------+------+-----+---------+----------------+
+| Field       | Type        | Null | Key | Default | Extra          |
++-------------+-------------+------+-----+---------+----------------+
+| Product_id  | int(11)     | NO   | PRI | NULL    | auto_increment |
+| Name        | varchar(50) | NO   |     | NULL    |                |
+| Rate        | int(11)     | NO   |     | NULL    |                |
+| Stock       | int(11)     | NO   |     | NULL    |                |
+| Category_id | int(11)     | YES  | MUL | NULL    |                |
++-------------+-------------+------+-----+---------+----------------+
+5 rows in set (0.00 sec)
+
+mysql> insert into Product(Category_id,Name,Stock,Rate) values (1,AramPads,10,1200);
+ERROR 1054 (42S22): Unknown column 'AramPads' in 'field list'
+mysql> insert into Product(Category_id,Name,Stock,Rate) values (1,'AramPads',10,1200);
+Query OK, 1 row affected (0.03 sec)
+
+mysql> insert into Product(Category_id,Name,Stock,Rate) values (9,AramPads,10,1200);
+ERROR 1054 (42S22): Unknown column 'AramPads' in 'field list'
+mysql> select * from Prodcut;
+ERROR 1146 (42S02): Table 'Order_Managment.Prodcut' doesn't exist
+mysql> select * from Product;
++------------+----------+------+-------+-------------+
+| Product_id | Name     | Rate | Stock | Category_id |
++------------+----------+------+-------+-------------+
+|          1 | AramPads | 1200 |    10 |           1 |
++------------+----------+------+-------+-------------+
+1 row in set (0.00 sec)
+
+mysql> insert into Product(Category_id,Name,Stock,Rate) values (1,costume,50,2000); 
+ERROR 1054 (42S22): Unknown column 'costume' in 'field list'
+mysql> insert into Product(Category_id,Name,Stock,Rate) values (1,'Costume',50,2000);
+Query OK, 1 row affected (0.02 sec)
+
+mysql> insert into Product(Category_id,Name,Stock,Rate) values (1,'Arena Caps',50,3000);
+Query OK, 1 row affected (0.03 sec)
+
+mysql> insert into Product(Category_id,Name,Stock,Rate) values (1,'Arena Fins',10,9900);
+Query OK, 1 row affected (0.03 sec)
+
+mysql> select * from Product;                                                      +------------+------------+------+-------+-------------+
+| Product_id | Name       | Rate | Stock | Category_id |
++------------+------------+------+-------+-------------+
+|          1 | AramPads   | 1200 |    10 |           1 |
+|          2 | Costume    | 2000 |    50 |           1 |
+|          3 | Arena Caps | 3000 |    50 |           1 |
+|          4 | Arena Fins | 9900 |    10 |           1 |
++------------+------------+------+-------+-------------+
+4 rows in set (0.00 sec)
+
+mysql> select * from category;
+ERROR 1146 (42S02): Table 'Order_Managment.category' doesn't exist
+mysql> select * from Category;
++------------+-------------+
+| Name       | Category_id |
++------------+-------------+
+| Swimming   |           1 |
+| Cricket    |           2 |
+| Football   |           3 |
+| BasketBall |           4 |
+| BaseBall   |           5 |
+| WaterPolo  |           6 |
++------------+-------------+
+6 rows in set (0.00 sec)
+
+mysql> insert into Product(Category_id,Name,Stock,Rate) values (2,'Bat',9,1999);
+Query OK, 1 row affected (0.03 sec)
+
+mysql> insert into Product(Category_id,Name,Stock,Rate) values (2,'Ball',5,100);
+Query OK, 1 row affected (0.03 sec)
+
+mysql> insert into Product(Category_id,Name,Stock,Rate) values (2,'Stumps',17,499); 
+Query OK, 1 row affected (0.02 sec)
+
+mysql> select * from Category;
++------------+-------------+
+| Name       | Category_id |
++------------+-------------+
+| Swimming   |           1 |
+| Cricket    |           2 |
+| Football   |           3 |
+| BasketBall |           4 |
+| BaseBall   |           5 |
+| WaterPolo  |           6 |
++------------+-------------+
+6 rows in set (0.00 sec)
+
+mysql> select * from Product;
++------------+------------+------+-------+-------------+
+| Product_id | Name       | Rate | Stock | Category_id |
++------------+------------+------+-------+-------------+
+|          1 | AramPads   | 1200 |    10 |           1 |
+|          2 | Costume    | 2000 |    50 |           1 |
+|          3 | Arena Caps | 3000 |    50 |           1 |
+|          4 | Arena Fins | 9900 |    10 |           1 |
+|          5 | Bat        | 1999 |     9 |           2 |
+|          6 | Ball       |  100 |     5 |           2 |
+|          7 | Stumps     |  499 |    17 |           2 |
++------------+------------+------+-------+-------------+
+7 rows in set (0.00 sec)
+
+mysql> insert into Product(Category_id,Name,Stock,Rate) values (2,'Helmet',17,499); 
+Query OK, 1 row affected (0.04 sec)
+
+mysql> select * from Product;                                                      +------------+------------+------+-------+-------------+
+| Product_id | Name       | Rate | Stock | Category_id |
++------------+------------+------+-------+-------------+
+|          1 | AramPads   | 1200 |    10 |           1 |
+|          2 | Costume    | 2000 |    50 |           1 |
+|          3 | Arena Caps | 3000 |    50 |           1 |
+|          4 | Arena Fins | 9900 |    10 |           1 |
+|          5 | Bat        | 1999 |     9 |           2 |
+|          6 | Ball       |  100 |     5 |           2 |
+|          7 | Stumps     |  499 |    17 |           2 |
+|          8 | Helmet     |  499 |    17 |           2 |
++------------+------------+------+-------+-------------+
+8 rows in set (0.00 sec)
+
+mysql> 
