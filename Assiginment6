@@ -1,0 +1,1041 @@
+mllab04@mllab04:~$ sudo mysql -u root -p
+[sudo] password for mllab04: 
+Enter password: 
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 2
+Server version: 5.7.26-0ubuntu0.18.04.1 (Ubuntu)
+
+Copyright (c) 2000, 2019, Oracle and/or its affiliates. All rights reserved.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| EMP                |
+| Hotel              |
+| NHL                |
+| Order_Managment    |
+| Practice           |
+| Sampledb           |
+| Test               |
+| company            |
+| hotel              |
+| mysql              |
+| order_managment    |
+| order_managment1   |
+| performance_schema |
+| resutrants         |
+| student            |
+| sys                |
++--------------------+
+17 rows in set (0.07 sec)
+
+mysql> use Order_Managment;
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Database changed
+mysql> show tables;
++---------------------------+
+| Tables_in_Order_Managment |
++---------------------------+
+| Category                  |
+| Customer                  |
+| Order_Details             |
+| Product                   |
++---------------------------+
+4 rows in set (0.00 sec)
+
+mysql> select * from Cutomer;
+ERROR 1146 (42S02): Table 'Order_Managment.Cutomer' doesn't exist
+mysql> select * from Customer;
++------------------+-------------+---------------------------+-------------+------------+
+| Name             | Customer_id | Email_id                  | Phone_no    | DOB        |
++------------------+-------------+---------------------------+-------------+------------+
+| Aditi Bhade      |           5 | aditibhade@gmail.com      | 9542332153  | 1999-05-12 |
+| Piyush Agrawal   |           6 | piyushagrawal@gmail.com   | 9922975633  | 1999-05-25 |
+| Ameya Bhelonde   |           7 | ameyabhelonde@gmail.com   | 9444323343  | 1999-09-12 |
+| Ankit Dhomane    |           8 | ankitdhomane@gmail.com    | 9158442825  | 1999-09-04 |
+| Mohit Arora      |           9 | moharora08@gmail.com      | 8154424242  | 1999-08-26 |
+| Ashwin Kotgire   |          10 | ashwin@gmail.com          | 8524245541  | 1999-07-19 |
+| Sagar Badlani    |          11 | sagarbadlani@gmail.com    |             | 1999-09-17 |
+| Shrishti Bankar  |          12 | shrishti@gmail.com        |             | 1999-12-17 |
+| Darshan Bhramare |          13 | darshanbhramare@gmail.com | 8767534246  | 1999-01-12 |
+| Eesha Bhayya     |          14 | eesha@gmail.com           | 994134322   | 1999-05-10 |
+| Atharva Chauan   |          15 | atharva@gmail.com         | 8654321323  | 1999-11-24 |
+| Shubham Darak    |          16 | shubham@gmail.com         | 8434354321  | 1999-02-19 |
+| Omkar Deshpande  |          17 | omkardesh@gmail.com       | 994642333   | 1999-06-09 |
+| Devesh Chandak   |          18 | deveshchandak@gmail.com   | 8973413213  | 1999-03-01 |
+| Riya Dharamsi    |          19 | riyadharmsi@gmail.com     | 7653231335  | 1999-07-12 |
+| Deepak Madavi    |          20 | deepakmadavi@gmail.com    | 8343433211  | 1999-08-19 |
+| Alrik Fernandes  |          21 | alrikfernandes@gmail.com  | 9522244122  | 1999-02-28 |
+| Atharva Galphade |          22 | atharvagalphade@gmail.com | 8435321213  | 1999-10-15 |
+| Ajay Ghorsade    |          23 | ajsy@gmail.com            | 84354343542 | 1999-02-13 |
+| Japjyot Gulati   |          24 | japjyot@gmail.com         | 9756313543  | 1999-08-12 |
++------------------+-------------+---------------------------+-------------+------------+
+20 rows in set (0.01 sec)
+
+mysql> select * from Category;
++-------------+-------------+
+| Name        | Category_id |
++-------------+-------------+
+| Pens        |          14 |
+| Notebooks   |          15 |
+| Accessories |          16 |
+| Books       |          17 |
+| Gifts       |          18 |
++-------------+-------------+
+5 rows in set (0.00 sec)
+
+mysql> use Order_Managment;
+Database changed
+mysql> show tables;
++---------------------------+
+| Tables_in_Order_Managment |
++---------------------------+
+| Category                  |
+| Customer                  |
+| Order_Details             |
+| Product                   |
++---------------------------+
+4 rows in set (0.00 sec)
+
+mysql> select * from Product;
+Empty set (0.00 sec)
+
+mysql> select * from Category;
++-------------+-------------+
+| Name        | Category_id |
++-------------+-------------+
+| Pens        |          14 |
+| Notebooks   |          15 |
+| Accessories |          16 |
+| Books       |          17 |
+| Gifts       |          18 |
++-------------+-------------+
+5 rows in set (0.00 sec)
+
+mysql> select * from Customer;
++------------------+-------------+---------------------------+-------------+------------+
+| Name             | Customer_id | Email_id                  | Phone_no    | DOB        |
++------------------+-------------+---------------------------+-------------+------------+
+| Aditi Bhade      |           5 | aditibhade@gmail.com      | 9542332153  | 1999-05-12 |
+| Piyush Agrawal   |           6 | piyushagrawal@gmail.com   | 9922975633  | 1999-05-25 |
+| Ameya Bhelonde   |           7 | ameyabhelonde@gmail.com   | 9444323343  | 1999-09-12 |
+| Ankit Dhomane    |           8 | ankitdhomane@gmail.com    | 9158442825  | 1999-09-04 |
+| Mohit Arora      |           9 | moharora08@gmail.com      | 8154424242  | 1999-08-26 |
+| Ashwin Kotgire   |          10 | ashwin@gmail.com          | 8524245541  | 1999-07-19 |
+| Sagar Badlani    |          11 | sagarbadlani@gmail.com    |             | 1999-09-17 |
+| Shrishti Bankar  |          12 | shrishti@gmail.com        |             | 1999-12-17 |
+| Darshan Bhramare |          13 | darshanbhramare@gmail.com | 8767534246  | 1999-01-12 |
+| Eesha Bhayya     |          14 | eesha@gmail.com           | 994134322   | 1999-05-10 |
+| Atharva Chauan   |          15 | atharva@gmail.com         | 8654321323  | 1999-11-24 |
+| Shubham Darak    |          16 | shubham@gmail.com         | 8434354321  | 1999-02-19 |
+| Omkar Deshpande  |          17 | omkardesh@gmail.com       | 994642333   | 1999-06-09 |
+| Devesh Chandak   |          18 | deveshchandak@gmail.com   | 8973413213  | 1999-03-01 |
+| Riya Dharamsi    |          19 | riyadharmsi@gmail.com     | 7653231335  | 1999-07-12 |
+| Deepak Madavi    |          20 | deepakmadavi@gmail.com    | 8343433211  | 1999-08-19 |
+| Alrik Fernandes  |          21 | alrikfernandes@gmail.com  | 9522244122  | 1999-02-28 |
+| Atharva Galphade |          22 | atharvagalphade@gmail.com | 8435321213  | 1999-10-15 |
+| Ajay Ghorsade    |          23 | ajsy@gmail.com            | 84354343542 | 1999-02-13 |
+| Japjyot Gulati   |          24 | japjyot@gmail.com         | 9756313543  | 1999-08-12 |
++------------------+-------------+---------------------------+-------------+------------+
+20 rows in set (0.00 sec)
+
+mysql> use order_managment;
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Database changed
+mysql> show tables;
++---------------------------+
+| Tables_in_order_managment |
++---------------------------+
+| category                  |
+| customer                  |
+| customer_contact          |
+| orders                    |
+| product                   |
++---------------------------+
+5 rows in set (0.00 sec)
+
+mysql> use Order_Managment;
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Database changed
+mysql> show tables
+    -> ;
++---------------------------+
+| Tables_in_Order_Managment |
++---------------------------+
+| Category                  |
+| Customer                  |
+| Order_Details             |
+| Product                   |
++---------------------------+
+4 rows in set (0.00 sec)
+
+mysql> desc Category;
++-------------+-------------+------+-----+---------+----------------+
+| Field       | Type        | Null | Key | Default | Extra          |
++-------------+-------------+------+-----+---------+----------------+
+| Name        | varchar(50) | NO   |     | NULL    |                |
+| Category_id | int(11)     | NO   | PRI | NULL    | auto_increment |
++-------------+-------------+------+-----+---------+----------------+
+2 rows in set (0.01 sec)
+
+mysql> desc Customer;
++-------------+-------------+------+-----+---------+----------------+
+| Field       | Type        | Null | Key | Default | Extra          |
++-------------+-------------+------+-----+---------+----------------+
+| Name        | varchar(50) | NO   |     | NULL    |                |
+| Customer_id | int(11)     | NO   | PRI | NULL    | auto_increment |
+| Email_id    | varchar(30) | YES  |     | NULL    |                |
+| Phone_no    | varchar(20) | YES  |     | NULL    |                |
+| DOB         | date        | YES  |     | NULL    |                |
++-------------+-------------+------+-----+---------+----------------+
+5 rows in set (0.00 sec)
+
+mysql> delete from Customer;
+Query OK, 20 rows affected (0.03 sec)
+
+mysql> select * from Category;
++-------------+-------------+
+| Name        | Category_id |
++-------------+-------------+
+| Pens        |          14 |
+| Notebooks   |          15 |
+| Accessories |          16 |
+| Books       |          17 |
+| Gifts       |          18 |
++-------------+-------------+
+5 rows in set (0.00 sec)
+
+mysql> select * from Customer;
+Empty set (0.01 sec)
+
+mysql> delete from Category;
+Query OK, 5 rows affected (0.04 sec)
+
+mysql> insert into table Category(Name)values('Swimming');
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'table Category(Name)values('Swimming')' at line 1
+mysql> insert into table Category(Name)values(Swimming);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'table Category(Name)values(Swimming)' at line 1
+mysql> insert into Category(Name) values('Football');
+Query OK, 1 row affected (0.04 sec)
+
+mysql> insert into Category(Name) values('Swimming');
+Query OK, 1 row affected (0.03 sec)
+
+mysql> insert into Category(Name) values('Cricket');
+Query OK, 1 row affected (0.03 sec)
+
+mysql> insert into Category(Name) values('BasketBall');
+Query OK, 1 row affected (0.03 sec)
+
+mysql> insert into Category(Name) values('Badminton');
+Query OK, 1 row affected (0.03 sec)
+
+mysql> insert into Category(Name) values('Long Tennis');
+Query OK, 1 row affected (0.04 sec)
+
+mysql> select * from Category
+    -> ;
++-------------+-------------+
+| Name        | Category_id |
++-------------+-------------+
+| Football    |          19 |
+| Swimming    |          20 |
+| Cricket     |          21 |
+| BasketBall  |          22 |
+| Badminton   |          23 |
+| Long Tennis |          24 |
++-------------+-------------+
+6 rows in set (0.00 sec)
+
+mysql> delete from Category;
+Query OK, 6 rows affected (0.04 sec)
+
+mysql> insert into Category(Name ,Category_id) values('Cricket',1);
+Query OK, 1 row affected (0.03 sec)
+
+mysql> select * from Category
+    -> ;
++---------+-------------+
+| Name    | Category_id |
++---------+-------------+
+| Cricket |           1 |
++---------+-------------+
+1 row in set (0.00 sec)
+
+mysql> insert into Category(Name) values('Long Tennis');
+Query OK, 1 row affected (0.03 sec)
+
+mysql> select * from Category
+    -> ;
++-------------+-------------+
+| Name        | Category_id |
++-------------+-------------+
+| Cricket     |           1 |
+| Long Tennis |          25 |
++-------------+-------------+
+2 rows in set (0.00 sec)
+
+mysql> drop C
+CACHE                CLOSE                CONVERT             
+CALL                 COALESCE             CONVERT_TZ          
+CASCADE              CODE                 COS                 
+CASCADED             COERCIBILITY         Cost                
+CASE                 COLLATE              COT                 
+CAST                 COLLATION            COUNT               
+Category             COLUMN               CRC32               
+Category.Category_id COLUMNS              CREATE              
+Category.Name        COMMENT              CROSS               
+Category_id          COMMIT               CROSSES             
+CEIL                 COMMITTED            CUBE                
+CEILING              COMPACT              CURDATE             
+CENTROID             COMPRESS             CURRENT_DATE        
+CHAIN                COMPRESSED           CURRENT_TIME        
+CHANGE               CONCAT               CURRENT_TIMESTAMP   
+CHANGED              CONCAT_WS            CURRENT_USER        
+CHAR                 CONCURRENT           CURSOR              
+CHAR_LENGTH          CONDITION            CURTIME             
+CHARACTER            CONNECTION           Customer            
+CHARACTER_LENGTH     CONNECTION_ID        Customer.Customer_id
+CHARSET              CONSISTENT           Customer.DOB        
+CHECK                CONSTRAINT           Customer.Email_id   
+CHECKSUM             CONTAINS             Customer.Name       
+CIPHER               CONTINUE             Customer.Phone_no   
+CLIENT               CONV                 Customer_id         
+mysql> drop C
+CACHE                CLOSE                CONVERT             
+CALL                 COALESCE             CONVERT_TZ          
+CASCADE              CODE                 COS                 
+CASCADED             COERCIBILITY         Cost                
+CASE                 COLLATE              COT                 
+CAST                 COLLATION            COUNT               
+Category             COLUMN               CRC32               
+Category.Category_id COLUMNS              CREATE              
+Category.Name        COMMENT              CROSS               
+Category_id          COMMIT               CROSSES             
+CEIL                 COMMITTED            CUBE                
+CEILING              COMPACT              CURDATE             
+CENTROID             COMPRESS             CURRENT_DATE        
+CHAIN                COMPRESSED           CURRENT_TIME        
+CHANGE               CONCAT               CURRENT_TIMESTAMP   
+CHANGED              CONCAT_WS            CURRENT_USER        
+CHAR                 CONCURRENT           CURSOR              
+CHAR_LENGTH          CONDITION            CURTIME             
+CHARACTER            CONNECTION           Customer            
+CHARACTER_LENGTH     CONNECTION_ID        Customer.Customer_id
+CHARSET              CONSISTENT           Customer.DOB        
+CHECK                CONSTRAINT           Customer.Email_id   
+CHECKSUM             CONTAINS             Customer.Name       
+CIPHER               CONTINUE             Customer.Phone_no   
+CLIENT               CONV                 Customer_id         
+mysql> drop C
+CACHE                CLOSE                CONVERT             
+CALL                 COALESCE             CONVERT_TZ          
+CASCADE              CODE                 COS                 
+CASCADED             COERCIBILITY         Cost                
+CASE                 COLLATE              COT                 
+CAST                 COLLATION            COUNT               
+Category             COLUMN               CRC32               
+Category.Category_id COLUMNS              CREATE              
+Category.Name        COMMENT              CROSS               
+Category_id          COMMIT               CROSSES             
+CEIL                 COMMITTED            CUBE                
+CEILING              COMPACT              CURDATE             
+CENTROID             COMPRESS             CURRENT_DATE        
+CHAIN                COMPRESSED           CURRENT_TIME        
+CHANGE               CONCAT               CURRENT_TIMESTAMP   
+CHANGED              CONCAT_WS            CURRENT_USER        
+CHAR                 CONCURRENT           CURSOR              
+CHAR_LENGTH          CONDITION            CURTIME             
+CHARACTER            CONNECTION           Customer            
+CHARACTER_LENGTH     CONNECTION_ID        Customer.Customer_id
+CHARSET              CONSISTENT           Customer.DOB        
+CHECK                CONSTRAINT           Customer.Email_id   
+CHECKSUM             CONTAINS             Customer.Name       
+CIPHER               CONTINUE             Customer.Phone_no   
+CLIENT               CONV                 Customer_id         
+mysql> drop C
+CACHE                CLOSE                CONVERT             
+CALL                 COALESCE             CONVERT_TZ          
+CASCADE              CODE                 COS                 
+CASCADED             COERCIBILITY         Cost                
+CASE                 COLLATE              COT                 
+CAST                 COLLATION            COUNT               
+Category             COLUMN               CRC32               
+Category.Category_id COLUMNS              CREATE              
+Category.Name        COMMENT              CROSS               
+Category_id          COMMIT               CROSSES             
+CEIL                 COMMITTED            CUBE                
+CEILING              COMPACT              CURDATE             
+CENTROID             COMPRESS             CURRENT_DATE        
+CHAIN                COMPRESSED           CURRENT_TIME        
+CHANGE               CONCAT               CURRENT_TIMESTAMP   
+CHANGED              CONCAT_WS            CURRENT_USER        
+CHAR                 CONCURRENT           CURSOR              
+CHAR_LENGTH          CONDITION            CURTIME             
+CHARACTER            CONNECTION           Customer            
+CHARACTER_LENGTH     CONNECTION_ID        Customer.Customer_id
+CHARSET              CONSISTENT           Customer.DOB        
+CHECK                CONSTRAINT           Customer.Email_id   
+CHECKSUM             CONTAINS             Customer.Name       
+CIPHER               CONTINUE             Customer.Phone_no   
+CLIENT               CONV                 Customer_id         
+mysql> drop Category
+    -> ;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Category' at line 1
+mysql> drop table Category
+    -> ;
+ERROR 1217 (23000): Cannot delete or update a parent row: a foreign key constraint fails
+mysql> delete from Product;
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> delete from Product;
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> delete from Cateogry;
+ERROR 1146 (42S02): Table 'Order_Managment.Cateogry' doesn't exist
+mysql> delete from Category;
+Query OK, 2 rows affected (0.11 sec)
+
+mysql> alter table `Category` auto_increment = 1;
+Query OK, 0 rows affected (0.03 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> insert into Category(Name) values('Cricket');
+Query OK, 1 row affected (0.02 sec)
+
+mysql> select * from Category;
++---------+-------------+
+| Name    | Category_id |
++---------+-------------+
+| Cricket |           1 |
++---------+-------------+
+1 row in set (0.00 sec)
+
+mysql> insert into Category(Name) values('Swimming');
+Query OK, 1 row affected (0.04 sec)
+
+mysql> select * from Category;
++----------+-------------+
+| Name     | Category_id |
++----------+-------------+
+| Cricket  |           1 |
+| Swimming |           2 |
++----------+-------------+
+2 rows in set (0.01 sec)
+
+mysql> insert into Category(Name) values('Cricket');
+Query OK, 1 row affected (0.03 sec)
+
+mysql> insert into Category(Name) values('Football');
+Query OK, 1 row affected (0.04 sec)
+
+mysql> insert into Category(Name) values('Basketball');
+Query OK, 1 row affected (0.04 sec)
+
+mysql> insert into Category(Name) values('Badminton');
+Query OK, 1 row affected (0.04 sec)
+
+mysql> insert into Category(Name) values('Long Tennis');
+Query OK, 1 row affected (0.04 sec)
+
+mysql> select * from Category;
++-------------+-------------+
+| Name        | Category_id |
++-------------+-------------+
+| Cricket     |           1 |
+| Swimming    |           2 |
+| Cricket     |           3 |
+| Football    |           4 |
+| Basketball  |           5 |
+| Badminton   |           6 |
+| Long Tennis |           7 |
++-------------+-------------+
+7 rows in set (0.00 sec)
+
+mysql> insert into Category(Name) values('Water Polo');
+Query OK, 1 row affected (0.03 sec)
+
+mysql> select * from Category;
++-------------+-------------+
+| Name        | Category_id |
++-------------+-------------+
+| Cricket     |           1 |
+| Swimming    |           2 |
+| Cricket     |           3 |
+| Football    |           4 |
+| Basketball  |           5 |
+| Badminton   |           6 |
+| Long Tennis |           7 |
+| Water Polo  |           8 |
++-------------+-------------+
+8 rows in set (0.00 sec)
+
+mysql> desc Cutomer;
+ERROR 1146 (42S02): Table 'Order_Managment.Cutomer' doesn't exist
+mysql> desc Customer;
++-------------+-------------+------+-----+---------+----------------+
+| Field       | Type        | Null | Key | Default | Extra          |
++-------------+-------------+------+-----+---------+----------------+
+| Name        | varchar(50) | NO   |     | NULL    |                |
+| Customer_id | int(11)     | NO   | PRI | NULL    | auto_increment |
+| Email_id    | varchar(30) | YES  |     | NULL    |                |
+| Phone_no    | varchar(20) | YES  |     | NULL    |                |
+| DOB         | date        | YES  |     | NULL    |                |
++-------------+-------------+------+-----+---------+----------------+
+5 rows in set (0.00 sec)
+
+mysql> insert into Customer(Name,Email_id,Phone_no,DOB) values('Prathamesh','pratham@gmail.com',123456,mysql> insert into CustomPrathamesh','pratham@gmail.com',123456,STR_TO_DATE('12-may-1975', '%d-%M-%Y'));
+Query OK, 1 row affected (0.04 sec)
+
+mysql> slemysql> 
+mysql> insert into Customer(Name,Email_id,Phone_no,DOB) values('Aditya','Challo@gmail.com',465798,STR_TO_DATE('08-aug-1999', '%d-%M-%Y'));
+Query OK, 1 row affected (0.04 sec)
+
+mysql> insert into Customer(Name,Email_id,Phone_no,DOB) values('Atharva','Joshi@gmail.com',789132,STR_TO_DATE('30-dec-1999', '%d-%M-%Y'));
+Query OK, 1 row affected (0.03 sec)
+
+mysql> select * from Customer;
++------------+-------------+-------------------+----------+------------+
+| Name       | Customer_id | Email_id          | Phone_no | DOB        |
++------------+-------------+-------------------+----------+------------+
+| Prathamesh |          25 | pratham@gmail.com | 123456   | 1975-05-12 |
+| Aditya     |          26 | Challo@gmail.com  | 465798   | 1999-08-08 |
+| Atharva    |          27 | Joshi@gmail.com   | 789132   | 1999-12-30 |
++------------+-------------+-------------------+----------+------------+
+3 rows in set (0.00 sec)
+
+mysql> insert into Customer(Name,Email_id,Phone_no,DOB) values('Omkar','Omkar@gmail.com',741852,STR_TO_DATE('30-dec-2000', '%d-%M-%Y'));
+Query OK, 1 row affected (0.07 sec)
+
+mysql> insert into Customer(Name,Email_id,Phone_no,DOB) values('Dev','Dev@gmail.com',963852,STR_TO_DATE('20-dec-1999', '%d-%M-%Y'));
+Query OK, 1 row affected (0.04 sec)
+
+mysql> select * from Customer;                                                     +------------+-------------+-------------------+----------+------------+
+| Name       | Customer_id | Email_id          | Phone_no | DOB        |
++------------+-------------+-------------------+----------+------------+
+| Prathamesh |          25 | pratham@gmail.com | 123456   | 1975-05-12 |
+| Aditya     |          26 | Challo@gmail.com  | 465798   | 1999-08-08 |
+| Atharva    |          27 | Joshi@gmail.com   | 789132   | 1999-12-30 |
+| Omkar      |          28 | Omkar@gmail.com   | 741852   | 2000-12-30 |
+| Dev        |          29 | Dev@gmail.com     | 963852   | 1999-12-20 |
++------------+-------------+-------------------+----------+------------+
+5 rows in set (0.00 sec)
+
+mysql> alter table `Customer` auto_increment = 1;
+Query OK, 0 rows affected (0.03 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> drop from Customer;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'from Customer' at line 1
+mysql> delete from Customer;
+Query OK, 5 rows affected (0.04 sec)
+
+mysql> insert into Customer(Name,Email_id,Phone_no,DOB) values('Prathamesh','pratham@gmail.com',123456,STR_TO_DATE('12-feb-1999', '%d-%M-%Y'));
+Query OK, 1 row affected (0.03 sec)
+
+mysql> insert into Customer(Name,Email_id,Phone_no,DOB) values('Dev','Dev@gmail.com',963852,STR_TO_DATE('20-dec-1999', '%d-%M-%Y'));
+Query OK, 1 row affected (0.03 sec)
+
+mysql> insert into Customer(Name,Email_id,Phone_no,DOB) values('Omkar','Omkar@gmail.com',741852,STR_TO_DATE('30-dec-2000', '%d-%M-%Y'));
+Query OK, 1 row affected (0.02 sec)
+
+mysql> insert into Customer(Name,Email_id,Phone_no,DOB) values('Atharva','Joshi@gmail.com',789132,STR_TO_DATE('30-dec-1999', '%d-%M-%Y'));
+Query OK, 1 row affected (0.04 sec)
+
+mysql> insert into Customer(Name,Email_id,Phone_no,DOB) values('Aditya','Challo@gmail.com',465798,STR_TO_DATE('08-aug-1999', '%d-%M-%Y'));
+Query OK, 1 row affected (0.03 sec)
+
+mysql> select * from Customer
+    -> ;
++------------+-------------+-------------------+----------+------------+
+| Name       | Customer_id | Email_id          | Phone_no | DOB        |
++------------+-------------+-------------------+----------+------------+
+| Prathamesh |          30 | pratham@gmail.com | 123456   | 1999-02-12 |
+| Dev        |          31 | Dev@gmail.com     | 963852   | 1999-12-20 |
+| Omkar      |          32 | Omkar@gmail.com   | 741852   | 2000-12-30 |
+| Atharva    |          33 | Joshi@gmail.com   | 789132   | 1999-12-30 |
+| Aditya     |          34 | Challo@gmail.com  | 465798   | 1999-08-08 |
++------------+-------------+-------------------+----------+------------+
+5 rows in set (0.00 sec)
+
+mysql> alter table `Customer` auto_increment = 1;
+Query OK, 0 rows affected (0.04 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> insert into Customer(Name,Email_id,Phone_no,DOB) values('Aditya','Challo@gmail.com',465798,STR_TO_DATE('08-aug-1998', '%d-%M-%Y'));
+Query OK, 1 row affected (0.04 sec)
+
+mysql> select * from Customer;
++------------+-------------+-------------------+----------+------------+
+| Name       | Customer_id | Email_id          | Phone_no | DOB        |
++------------+-------------+-------------------+----------+------------+
+| Prathamesh |          30 | pratham@gmail.com | 123456   | 1999-02-12 |
+| Dev        |          31 | Dev@gmail.com     | 963852   | 1999-12-20 |
+| Omkar      |          32 | Omkar@gmail.com   | 741852   | 2000-12-30 |
+| Atharva    |          33 | Joshi@gmail.com   | 789132   | 1999-12-30 |
+| Aditya     |          34 | Challo@gmail.com  | 465798   | 1999-08-08 |
+| Aditya     |          35 | Challo@gmail.com  | 465798   | 1998-08-08 |
++------------+-------------+-------------------+----------+------------+
+6 rows in set (0.00 sec)
+
+mysql> alter table `Customer` auto_increment = 1;
+Query OK, 0 rows affected (0.04 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> select * from Customer;
++------------+-------------+-------------------+----------+------------+
+| Name       | Customer_id | Email_id          | Phone_no | DOB        |
++------------+-------------+-------------------+----------+------------+
+| Prathamesh |          30 | pratham@gmail.com | 123456   | 1999-02-12 |
+| Dev        |          31 | Dev@gmail.com     | 963852   | 1999-12-20 |
+| Omkar      |          32 | Omkar@gmail.com   | 741852   | 2000-12-30 |
+| Atharva    |          33 | Joshi@gmail.com   | 789132   | 1999-12-30 |
+| Aditya     |          34 | Challo@gmail.com  | 465798   | 1999-08-08 |
+| Aditya     |          35 | Challo@gmail.com  | 465798   | 1998-08-08 |
++------------+-------------+-------------------+----------+------------+
+6 rows in set (0.00 sec)
+
+mysql> insert into Customer(Name,Email_id,Phone_no,DOB) values('Aditya','Challo@gmail.com',465798,STR_TO_DATE('08-aug-19988', '%d-%M-%Y'));
+ERROR 1292 (22007): Truncated incorrect date value: '08-aug-19988'
+mysql> insert into Customer(Name,Email_id,Phone_no,DOB) values('Aditya','Challo@gmail.com',465798,STR_TO_DATE('08-aug-1997', '%d-%M-%Y'));
+Query OK, 1 row affected (0.04 sec)
+
+mysql> select * from Customer;
++------------+-------------+-------------------+----------+------------+
+| Name       | Customer_id | Email_id          | Phone_no | DOB        |
++------------+-------------+-------------------+----------+------------+
+| Prathamesh |          30 | pratham@gmail.com | 123456   | 1999-02-12 |
+| Dev        |          31 | Dev@gmail.com     | 963852   | 1999-12-20 |
+| Omkar      |          32 | Omkar@gmail.com   | 741852   | 2000-12-30 |
+| Atharva    |          33 | Joshi@gmail.com   | 789132   | 1999-12-30 |
+| Aditya     |          34 | Challo@gmail.com  | 465798   | 1999-08-08 |
+| Aditya     |          35 | Challo@gmail.com  | 465798   | 1998-08-08 |
+| Aditya     |          36 | Challo@gmail.com  | 465798   | 1997-08-08 |
++------------+-------------+-------------------+----------+------------+
+7 rows in set (0.01 sec)
+
+mysql> ALTER TABLE Customer AUTO_INCREMENT = 1
+    -> ;
+Query OK, 0 rows affected (0.03 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> insert into Customer(Name,Email_id,Phone_no,DOB) values('Aditya','Challo@gmail.com',465798,STR_TO_DATE('08-aug-1989', '%d-%M-%Y'));
+Query OK, 1 row affected (0.02 sec)
+
+mysql> select * from Customer;
++------------+-------------+-------------------+----------+------------+
+| Name       | Customer_id | Email_id          | Phone_no | DOB        |
++------------+-------------+-------------------+----------+------------+
+| Prathamesh |          30 | pratham@gmail.com | 123456   | 1999-02-12 |
+| Dev        |          31 | Dev@gmail.com     | 963852   | 1999-12-20 |
+| Omkar      |          32 | Omkar@gmail.com   | 741852   | 2000-12-30 |
+| Atharva    |          33 | Joshi@gmail.com   | 789132   | 1999-12-30 |
+| Aditya     |          34 | Challo@gmail.com  | 465798   | 1999-08-08 |
+| Aditya     |          35 | Challo@gmail.com  | 465798   | 1998-08-08 |
+| Aditya     |          36 | Challo@gmail.com  | 465798   | 1997-08-08 |
+| Aditya     |          37 | Challo@gmail.com  | 465798   | 1989-08-08 |
++------------+-------------+-------------------+----------+------------+
+8 rows in set (0.00 sec)
+
+mysql> delete from Customer;
+Query OK, 8 rows affected (0.04 sec)
+
+mysql> alter table `Customer` auto_increment = 1;
+Query OK, 0 rows affected (0.03 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> insert into Customer(Name,Customer_id,Email_id,Phone_no,DOB) values('Aditya',1,'Challo@gmail.com',465798,STR_TO_DATE('08-aug-1989', '%d-%M-%Y'));
+Query OK, 1 row affected (0.04 sec)
+
+mysql> select * from Customer;
++--------+-------------+------------------+----------+------------+
+| Name   | Customer_id | Email_id         | Phone_no | DOB        |
++--------+-------------+------------------+----------+------------+
+| Aditya |           1 | Challo@gmail.com | 465798   | 1989-08-08 |
++--------+-------------+------------------+----------+------------+
+1 row in set (0.00 sec)
+
+mysql> insert into Customer(Name,Email_id,Phone_no,DOB) values('Omkar','Omkar@gmail.com',741852,STR_TO_DATE('30-dec-2000', '%d-%M-%Y'));
+Query OK, 1 row affected (0.03 sec)
+
+mysql> select * from Customer;
++--------+-------------+------------------+----------+------------+
+| Name   | Customer_id | Email_id         | Phone_no | DOB        |
++--------+-------------+------------------+----------+------------+
+| Aditya |           1 | Challo@gmail.com | 465798   | 1989-08-08 |
+| Omkar  |           2 | Omkar@gmail.com  | 741852   | 2000-12-30 |
++--------+-------------+------------------+----------+------------+
+2 rows in set (0.00 sec)
+
+mysql> insert into Customer(Name,Email_id,Phone_no,DOB) values('Prathamesh','pratham@gmail.com',123456,STR_TO_DATE('19-feb-1999', '%d-%M-%Y'));
+Query OK, 1 row affected (0.03 sec)
+
+mysql> insert into Customer(Name,Email_id,Phone_no,DOB) values('Atharva','Joshi@gmail.com',789132,STR_TO_DATE('30-dec-1999', '%d-%M-%Y'));
+Query OK, 1 row affected (0.04 sec)
+
+mysql> insert into Customer(Name,Email_id,Phone_no,DOB) values('Dev','Dev@gmail.com',963852,STR_TO_DATE('20-dec-1999', '%d-%M-%Y'));
+Query OK, 1 row affected (0.06 sec)
+
+mysql> select * from Customer;
++------------+-------------+-------------------+----------+------------+
+| Name       | Customer_id | Email_id          | Phone_no | DOB        |
++------------+-------------+-------------------+----------+------------+
+| Aditya     |           1 | Challo@gmail.com  | 465798   | 1989-08-08 |
+| Omkar      |           2 | Omkar@gmail.com   | 741852   | 2000-12-30 |
+| Prathamesh |           3 | pratham@gmail.com | 123456   | 1999-02-19 |
+| Atharva    |           4 | Joshi@gmail.com   | 789132   | 1999-12-30 |
+| Dev        |           5 | Dev@gmail.com     | 963852   | 1999-12-20 |
++------------+-------------+-------------------+----------+------------+
+5 rows in set (0.00 sec)
+
+mysql> desc Product;
++-------------+-------------+------+-----+---------+----------------+
+| Field       | Type        | Null | Key | Default | Extra          |
++-------------+-------------+------+-----+---------+----------------+
+| Product_id  | int(11)     | NO   | PRI | NULL    | auto_increment |
+| Name        | varchar(50) | NO   |     | NULL    |                |
+| Rate        | int(11)     | NO   |     | NULL    |                |
+| Stock       | int(11)     | NO   |     | NULL    |                |
+| Category_id | int(11)     | YES  | MUL | NULL    |                |
++-------------+-------------+------+-----+---------+----------------+
+5 rows in set (0.00 sec)
+
+mysql> insert into Customer(Product_id,Name,Rate,Stock,Category_id) values(1,'Armspad',1200,5,2);
+ERROR 1054 (42S22): Unknown column 'Product_id' in 'field list'
+mysql> insert into Product(Product_id,Name,Rate,Stock,Category_id) values(1,'Armspad',1200,5,2);
+Query OK, 1 row affected (0.02 sec)
+
+mysql> select * from Product;
++------------+---------+------+-------+-------------+
+| Product_id | Name    | Rate | Stock | Category_id |
++------------+---------+------+-------+-------------+
+|          1 | Armspad | 1200 |     5 |           2 |
++------------+---------+------+-------+-------------+
+1 row in set (0.00 sec)
+
+mysql> insert into Product(Product_id,Name,Rate,Stock,Category_id) values(1,'Armspad',1200,5,9);
+ERROR 1062 (23000): Duplicate entry '1' for key 'PRIMARY'
+mysql> insert into Product(Name,Rate,Stock,Category_id) values('Armspad',1200,5,9);
+ERROR 1452 (23000): Cannot add or update a child row: a foreign key constraint fails (`Order_Managment`.`Product`, CONSTRAINT `Category_id` FOREIGN KEY (`Category_id`) REFERENCES `Category` (`Category_id`))
+mysql> insert into Product(Name,Rate,Stock,Category_id) values('Swimming Costume',999,2);
+ERROR 1136 (21S01): Column count doesn't match value count at row 1
+mysql> insert into Product(Name,Rate,Stock,Category_id) values('Swimming Costume',999,7,2);
+Query OK, 1 row affected (0.03 sec)
+
+mysql> select * from Product;
++------------+------------------+------+-------+-------------+
+| Product_id | Name             | Rate | Stock | Category_id |
++------------+------------------+------+-------+-------------+
+|          1 | Armspad          | 1200 |     5 |           2 |
+|          3 | Swimming Costume |  999 |     7 |           2 |
++------------+------------------+------+-------+-------------+
+2 rows in set (0.00 sec)
+
+mysql> insert into Product(Name,Rate,Stock,Category_id) values('Goggles',499,10,2);
+Query OK, 1 row affected (0.67 sec)
+
+mysql> insert into Product(Name,Rate,Stock,Category_id) values('Ball',20,50,3);
+Query OK, 1 row affected (0.06 sec)
+
+mysql> insert into Product(Name,Rate,Stock,Category_id) values('Bat',200,10,3);
+Query OK, 1 row affected (0.02 sec)
+
+mysql> desc Order_Details'
+    '> '
+    -> '
+    '> ;
+    '> ';
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''
+;
+'' at line 2
+mysql> desc Order_Details;
++------------------+-------------+------+-----+---------+----------------+
+| Field            | Type        | Null | Key | Default | Extra          |
++------------------+-------------+------+-----+---------+----------------+
+| Order_id         | int(11)     | NO   | PRI | NULL    | auto_increment |
+| Product_id       | int(11)     | YES  | MUL | NULL    |                |
+| Customer_id      | int(11)     | YES  | MUL | NULL    |                |
+| Delivary_Address | varchar(50) | YES  |     | NULL    |                |
+| Cost             | int(11)     | NO   |     | NULL    |                |
++------------------+-------------+------+-----+---------+----------------+
+5 rows in set (0.00 sec)
+
+mysql> select * from Order_Details;
+Empty set (0.00 sec)
+
+mysql> select * from Customer;
++------------+-------------+-------------------+----------+------------+
+| Name       | Customer_id | Email_id          | Phone_no | DOB        |
++------------+-------------+-------------------+----------+------------+
+| Aditya     |           1 | Challo@gmail.com  | 465798   | 1989-08-08 |
+| Omkar      |           2 | Omkar@gmail.com   | 741852   | 2000-12-30 |
+| Prathamesh |           3 | pratham@gmail.com | 123456   | 1999-02-19 |
+| Atharva    |           4 | Joshi@gmail.com   | 789132   | 1999-12-30 |
+| Dev        |           5 | Dev@gmail.com     | 963852   | 1999-12-20 |
++------------+-------------+-------------------+----------+------------+
+5 rows in set (0.00 sec)
+
+mysql> alter table Customer add Column Society varchar(15) after DOB;
+Query OK, 0 rows affected (0.50 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> select * from Customer;
++------------+-------------+-------------------+----------+------------+---------+
+| Name       | Customer_id | Email_id          | Phone_no | DOB        | Society |
++------------+-------------+-------------------+----------+------------+---------+
+| Aditya     |           1 | Challo@gmail.com  | 465798   | 1989-08-08 | NULL    |
+| Omkar      |           2 | Omkar@gmail.com   | 741852   | 2000-12-30 | NULL    |
+| Prathamesh |           3 | pratham@gmail.com | 123456   | 1999-02-19 | NULL    |
+| Atharva    |           4 | Joshi@gmail.com   | 789132   | 1999-12-30 | NULL    |
+| Dev        |           5 | Dev@gmail.com     | 963852   | 1999-12-20 | NULL    |
++------------+-------------+-------------------+----------+------------+---------+
+5 rows in set (0.00 sec)
+
+mysql> alter table Customer add Column City varchar(15) after Society;
+Query OK, 0 rows affected (0.51 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> alter table Customer add Column State varchar(15) after City;
+Query OK, 0 rows affected (0.57 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> select * from Customer;
++------------+-------------+-------------------+----------+------------+---------+------+-------+
+| Name       | Customer_id | Email_id          | Phone_no | DOB        | Society | City | State |
++------------+-------------+-------------------+----------+------------+---------+------+-------+
+| Aditya     |           1 | Challo@gmail.com  | 465798   | 1989-08-08 | NULL    | NULL | NULL  |
+| Omkar      |           2 | Omkar@gmail.com   | 741852   | 2000-12-30 | NULL    | NULL | NULL  |
+| Prathamesh |           3 | pratham@gmail.com | 123456   | 1999-02-19 | NULL    | NULL | NULL  |
+| Atharva    |           4 | Joshi@gmail.com   | 789132   | 1999-12-30 | NULL    | NULL | NULL  |
+| Dev        |           5 | Dev@gmail.com     | 963852   | 1999-12-20 | NULL    | NULL | NULL  |
++------------+-------------+-------------------+----------+------------+---------+------+-------+
+5 rows in set (0.00 sec)
+
+mysql> select * from Customer 
+    -> where Society="Sameer";
+Empty set (0.01 sec)
+
+mysql> update Customer
+    -> set 
+    -> Society = "Sameer"
+    -> where Customer_id=1;
+Query OK, 1 row affected (0.03 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> select * from Customer; 
++------------+-------------+-------------------+----------+------------+---------+------+-------+
+| Name       | Customer_id | Email_id          | Phone_no | DOB        | Society | City | State |
++------------+-------------+-------------------+----------+------------+---------+------+-------+
+| Aditya     |           1 | Challo@gmail.com  | 465798   | 1989-08-08 | Sameer  | NULL | NULL  |
+| Omkar      |           2 | Omkar@gmail.com   | 741852   | 2000-12-30 | NULL    | NULL | NULL  |
+| Prathamesh |           3 | pratham@gmail.com | 123456   | 1999-02-19 | NULL    | NULL | NULL  |
+| Atharva    |           4 | Joshi@gmail.com   | 789132   | 1999-12-30 | NULL    | NULL | NULL  |
+| Dev        |           5 | Dev@gmail.com     | 963852   | 1999-12-20 | NULL    | NULL | NULL  |
++------------+-------------+-------------------+----------+------------+---------+------+-------+
+5 rows in set (0.00 sec)
+
+mysql> update Customer set  Society = "IndiraNagar" where Customer_id=2;
+Query OK, 1 row affected (0.04 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> update Customer set  Society = "RaneNagar" where Customer_id=2;
+Query OK, 1 row affected (0.03 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> update Customer set  Society = "Kotharud" where Customer_id=3;
+Query OK, 1 row affected (0.08 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> select * from Customer;
++------------+-------------+-------------------+----------+------------+-----------+------+-------+
+| Name       | Customer_id | Email_id          | Phone_no | DOB        | Society   | City | State |
++------------+-------------+-------------------+----------+------------+-----------+------+-------+
+| Aditya     |           1 | Challo@gmail.com  | 465798   | 1989-08-08 | Sameer    | NULL | NULL  |
+| Omkar      |           2 | Omkar@gmail.com   | 741852   | 2000-12-30 | RaneNagar | NULL | NULL  |
+| Prathamesh |           3 | pratham@gmail.com | 123456   | 1999-02-19 | Kotharud  | NULL | NULL  |
+| Atharva    |           4 | Joshi@gmail.com   | 789132   | 1999-12-30 | NULL      | NULL | NULL  |
+| Dev        |           5 | Dev@gmail.com     | 963852   | 1999-12-20 | NULL      | NULL | NULL  |
++------------+-------------+-------------------+----------+------------+-----------+------+-------+
+5 rows in set (0.00 sec)
+
+mysql> update Customer set  Society = "NDA gate" where Customer_id=4;
+Query OK, 1 row affected (0.05 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> update Customer set  Society = "ShivajiNagar" where Customer_id=5;
+Query OK, 1 row affected (0.04 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> select * from Customer;
++------------+-------------+-------------------+----------+------------+--------------+------+-------+
+| Name       | Customer_id | Email_id          | Phone_no | DOB        | Society      | City | State |
++------------+-------------+-------------------+----------+------------+--------------+------+-------+
+| Aditya     |           1 | Challo@gmail.com  | 465798   | 1989-08-08 | Sameer       | NULL | NULL  |
+| Omkar      |           2 | Omkar@gmail.com   | 741852   | 2000-12-30 | RaneNagar    | NULL | NULL  |
+| Prathamesh |           3 | pratham@gmail.com | 123456   | 1999-02-19 | Kotharud     | NULL | NULL  |
+| Atharva    |           4 | Joshi@gmail.com   | 789132   | 1999-12-30 | NDA gate     | NULL | NULL  |
+| Dev        |           5 | Dev@gmail.com     | 963852   | 1999-12-20 | ShivajiNagar | NULL | NULL  |
++------------+-------------+-------------------+----------+------------+--------------+------+-------+
+5 rows in set (0.01 sec)
+
+mysql> UPDATE `Customer` SET `City` = "Pune";
+Query OK, 5 rows affected (0.04 sec)
+Rows matched: 5  Changed: 5  Warnings: 0
+
+mysql> select * from Customer;
++------------+-------------+-------------------+----------+------------+--------------+------+-------+
+| Name       | Customer_id | Email_id          | Phone_no | DOB        | Society      | City | State |
++------------+-------------+-------------------+----------+------------+--------------+------+-------+
+| Aditya     |           1 | Challo@gmail.com  | 465798   | 1989-08-08 | Sameer       | Pune | NULL  |
+| Omkar      |           2 | Omkar@gmail.com   | 741852   | 2000-12-30 | RaneNagar    | Pune | NULL  |
+| Prathamesh |           3 | pratham@gmail.com | 123456   | 1999-02-19 | Kotharud     | Pune | NULL  |
+| Atharva    |           4 | Joshi@gmail.com   | 789132   | 1999-12-30 | NDA gate     | Pune | NULL  |
+| Dev        |           5 | Dev@gmail.com     | 963852   | 1999-12-20 | ShivajiNagar | Pune | NULL  |
++------------+-------------+-------------------+----------+------------+--------------+------+-------+
+5 rows in set (0.00 sec)
+
+mysql> update Customer set  City = "Nasik" where Customer_id=1;
+Query OK, 1 row affected (0.03 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> select * from Customer;
++------------+-------------+-------------------+----------+------------+--------------+-------+-------+
+| Name       | Customer_id | Email_id          | Phone_no | DOB        | Society      | City  | State |
++------------+-------------+-------------------+----------+------------+--------------+-------+-------+
+| Aditya     |           1 | Challo@gmail.com  | 465798   | 1989-08-08 | Sameer       | Nasik | NULL  |
+| Omkar      |           2 | Omkar@gmail.com   | 741852   | 2000-12-30 | RaneNagar    | Pune  | NULL  |
+| Prathamesh |           3 | pratham@gmail.com | 123456   | 1999-02-19 | Kotharud     | Pune  | NULL  |
+| Atharva    |           4 | Joshi@gmail.com   | 789132   | 1999-12-30 | NDA gate     | Pune  | NULL  |
+| Dev        |           5 | Dev@gmail.com     | 963852   | 1999-12-20 | ShivajiNagar | Pune  | NULL  |
++------------+-------------+-------------------+----------+------------+--------------+-------+-------+
+5 rows in set (0.00 sec)
+
+mysql> update Customer set  City = "Nasik" where Customer_id=3;
+Query OK, 1 row affected (0.03 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> select * from Customer;
++------------+-------------+-------------------+----------+------------+--------------+-------+-------+
+| Name       | Customer_id | Email_id          | Phone_no | DOB        | Society      | City  | State |
++------------+-------------+-------------------+----------+------------+--------------+-------+-------+
+| Aditya     |           1 | Challo@gmail.com  | 465798   | 1989-08-08 | Sameer       | Nasik | NULL  |
+| Omkar      |           2 | Omkar@gmail.com   | 741852   | 2000-12-30 | RaneNagar    | Pune  | NULL  |
+| Prathamesh |           3 | pratham@gmail.com | 123456   | 1999-02-19 | Kotharud     | Nasik | NULL  |
+| Atharva    |           4 | Joshi@gmail.com   | 789132   | 1999-12-30 | NDA gate     | Pune  | NULL  |
+| Dev        |           5 | Dev@gmail.com     | 963852   | 1999-12-20 | ShivajiNagar | Pune  | NULL  |
++------------+-------------+-------------------+----------+------------+--------------+-------+-------+
+5 rows in set (0.00 sec)
+
+mysql> UPDATE `Customer` SET `State` = "Maharastra";
+Query OK, 5 rows affected (0.03 sec)
+Rows matched: 5  Changed: 5  Warnings: 0
+
+mysql> select * from Customer;
++------------+-------------+-------------------+----------+------------+--------------+-------+------------+
+| Name       | Customer_id | Email_id          | Phone_no | DOB        | Society      | City  | State      |
++------------+-------------+-------------------+----------+------------+--------------+-------+------------+
+| Aditya     |           1 | Challo@gmail.com  | 465798   | 1989-08-08 | Sameer       | Nasik | Maharastra |
+| Omkar      |           2 | Omkar@gmail.com   | 741852   | 2000-12-30 | RaneNagar    | Pune  | Maharastra |
+| Prathamesh |           3 | pratham@gmail.com | 123456   | 1999-02-19 | Kotharud     | Nasik | Maharastra |
+| Atharva    |           4 | Joshi@gmail.com   | 789132   | 1999-12-30 | NDA gate     | Pune  | Maharastra |
+| Dev        |           5 | Dev@gmail.com     | 963852   | 1999-12-20 | ShivajiNagar | Pune  | Maharastra |
++------------+-------------+-------------------+----------+------------+--------------+-------+------------+
+5 rows in set (0.00 sec)
+
+mysql> desc Order_Details;
++------------------+-------------+------+-----+---------+----------------+
+| Field            | Type        | Null | Key | Default | Extra          |
++------------------+-------------+------+-----+---------+----------------+
+| Order_id         | int(11)     | NO   | PRI | NULL    | auto_increment |
+| Product_id       | int(11)     | YES  | MUL | NULL    |                |
+| Customer_id      | int(11)     | YES  | MUL | NULL    |                |
+| Delivary_Address | varchar(50) | YES  |     | NULL    |                |
+| Cost             | int(11)     | NO   |     | NULL    |                |
++------------------+-------------+------+-----+---------+----------------+
+5 rows in set (0.01 sec)
+
+mysql> CREATE TABLE BR_FLIGHT (
+    -> REFERENCE_ID NVARCHAR(10) NOT NULL ,
+    -> CUST_ID NUMBER(10)NOT NULL,
+    -> FLIGHT_ID NVARCHAR (10) NOT NULL,
+    -> PRIMARY KEY(REFERENCE_ID, FLIGHT_ID),
+    -> FOREIGN KEY  (REFERENCE_ID, CUST_ID) REFERENCES BOOKING_REFERENCE (REFERENCE_ID, CUST_ID)
+    -> );
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'NUMBER(10)NOT NULL,
+FLIGHT_ID NVARCHAR (10) NOT NULL,
+PRIMARY KEY(REFERENCE_ID, ' at line 3
+mysql> CREATE TABLE BR_FLIGHT (
+    -> REFERENCE_ID NVARCHAR(10) NOT NULL ,
+    -> CUST_ID NUMBER(10)NOT NULL,
+    -> FLIGHT_ID NVARCHAR (10) NOT NULL,
+    -> PRIMARY KEY(REFERENCE_ID, FLIGHT_ID),
+    -> FOREIGN KEY  (REFERENCE_ID, CUST_ID) REFERENCES BOOKING_REFERENCE (REFERENCE_ID, CUST_ID)
+    -> );
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'NUMBER(10)NOT NULL,
+FLIGHT_ID NVARCHAR (10) NOT NULL,
+PRIMARY KEY(REFERENCE_ID, ' at line 3
+mysql> alter table Order_Details 
+    -> 
+Display all 808 possibilities? (y or n) 
+    -> ;
+;
+^C
+mysql> alter table Order_Details                                                                                                                                            -> add primary key(Product_id,Customer_id);
+ERROR 1068 (42000): Multiple primary key defined
+mysql> alter table Order_Details add primary key(Product_id);
+ERROR 1068 (42000): Multiple primary key defined
+mysql> alter table Order_Details add primary key(Product_id);
+ERROR 1068 (42000): Multiple primary key defined
+mysql> alter table Order_Details drop PRIMARY KEY;
+ERROR 1075 (42000): Incorrect table definition; there can be only one auto column and it must be defined as a key
+mysql> alter table Order_Details modify 'Order_id' int(11)  drop PRIMARY KEY ,  ADD PRIMARY KEY (Order_id,Customer_id,Customer_id);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''Order_id' int(11)  drop PRIMARY KEY ,  ADD PRIMARY KEY (Order_id,Customer_id,Cu' at line 1
+mysql> alter table Order_Details modify 'Order_id' int(11)  drop PRIMARY KEY ADD PRIMARY KEY (Order_id,Customer_id,Customer_id);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''Order_id' int(11)  drop PRIMARY KEY ADD PRIMARY KEY (Order_id,Customer_id,Custo' at line 1
+mysql> alter table Order_Details modify 'Order_id' int(11) , drop PRIMARY KEY,  ADD PRIMARY KEY (Order_id,Customer_id,Customer_id);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''Order_id' int(11) , drop PRIMARY KEY,  ADD PRIMARY KEY (Order_id,Customer_id,Cu' at line 1
+mysql> alter table Order_Details modify `Order_id` int(11) , drop PRIMARY KEY,  ADD PRIMARY KEY (`Order_id`,`Customer_id`,`Customer_id`);
+ERROR 1060 (42S21): Duplicate column name 'Customer_id'
+mysql> alter table Order_Details modify `Order_id` int(11) , drop PRIMARY KEY,  ADD PRIMARY KEY (`Order_id`,`Customer_id`,`Product_id`);
+Query OK, 0 rows affected (0.68 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> desc O
+OCT                            ONE_SHOT                       OR                             Order_Details.Customer_id      Order_Managment               
+OCTET_LENGTH                   OPEN                           ORD                            Order_Details.Delivary_Address OUT                           
+OFFSET                         OPTIMIZE                       ORDER                          Order_Details.Order_id         OUTER                         
+ON                             OPTION                         Order_Details                  Order_Details.Product_id       OUTFILE                       
+ONE                            OPTIONALLY                     Order_Details.Cost             Order_id                       OVERLAPS                      
+mysql> desc Order_Details;
++------------------+-------------+------+-----+---------+-------+
+| Field            | Type        | Null | Key | Default | Extra |
++------------------+-------------+------+-----+---------+-------+
+| Order_id         | int(11)     | NO   | PRI | NULL    |       |
+| Product_id       | int(11)     | NO   | PRI | NULL    |       |
+| Customer_id      | int(11)     | NO   | PRI | NULL    |       |
+| Delivary_Address | varchar(50) | YES  |     | NULL    |       |
+| Cost             | int(11)     | NO   |     | NULL    |       |
++------------------+-------------+------+-----+---------+-------+
+5 rows in set (0.00 sec)
+
+mysql> exit()
+    -> ;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'exit()' at line 1
+mysql> quit()
+    -> ;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'quit()' at line 1
+mysql> 
