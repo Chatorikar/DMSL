@@ -80,6 +80,9 @@ CREATE TABLE `Order_Details` (
   `Order_id` int(11) NOT NULL,
   `Product_id` int(11) NOT NULL,
   `Customer_id` int(11) NOT NULL,
+  `Product_Name` varchar(50) DEFAULT NULL,
+  `Quantity` int(11) DEFAULT NULL,
+  `Purchase_Date` date DEFAULT NULL,
   `Delivary_Address` varchar(50) DEFAULT NULL,
   `Cost` int(11) NOT NULL,
   PRIMARY KEY (`Order_id`,`Customer_id`,`Product_id`),
@@ -135,4 +138,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-07-17 13:15:27
+-- Dump completed on 2019-07-22 15:56:00
