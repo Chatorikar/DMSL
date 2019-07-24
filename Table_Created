@@ -1,0 +1,394 @@
+mllab04@mllab04:~$ sudo mysql -u root -p
+[sudo] password for mllab04: 
+Sorry, try again.
+[sudo] password for mllab04: 
+Enter password: 
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 4
+Server version: 5.7.26-0ubuntu0.18.04.1 (Ubuntu)
+
+Copyright (c) 2000, 2019, Oracle and/or its affiliates. All rights reserved.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> use databases;
+ERROR 1049 (42000): Unknown database 'databases'
+mysql> use Order_Managment;
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Database changed
+mysql> source /home/mllab04/33313.sql;
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected, 1 warning (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.14 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.18 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 8 rows affected (0.03 sec)
+Records: 8  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.08 sec)
+
+Query OK, 0 rows affected (0.14 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.23 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 5 rows affected (0.03 sec)
+Records: 5  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.07 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') ENGINE=InnoDB DEFAULT CHARSET=latin1' at line 18
+Query OK, 0 rows affected (0.00 sec)
+
+ERROR 1146 (42S02): Table 'Order_Managment.Order_Details' doesn't exist
+ERROR 1146 (42S02): Table 'Order_Managment.Order_Details' doesn't exist
+ERROR 1146 (42S02): Table 'Order_Managment.Order_Details' doesn't exist
+ERROR 1146 (42S02): Table 'Order_Managment.Order_Details' doesn't exist
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.17 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.31 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 5 rows affected (0.05 sec)
+Records: 5  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.07 sec)
+
+Query OK, 0 rows affected (0.13 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.37 sec)
+
+Query OK, 0 rows affected (0.01 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 1 row affected (0.03 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected, 1 warning (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> show tabels;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'tabels' at line 1
+mysql> show tables;
++---------------------------+
+| Tables_in_Order_Managment |
++---------------------------+
+| Category                  |
+| Customer                  |
+| Product                   |
+| Record_Of_Order           |
++---------------------------+
+4 rows in set (0.00 sec)
+
+mysql> CREATE TABLE `Order_Details` (
+    ->   `Order_ID` int(11) NOT NULL,
+    ->   `Customer_id` int(11) NOT NULL,
+    ->   `Product_id` int(11) NOT NULL,
+    ->   `Product_Name` varchar(50) NOT NULL,
+    ->   `Product_Cost` int(11) NOT NULL,
+    ->   `Product_Quantity` int(11) NOT NULL,
+    ->   `Total_Cost` int(11) NOT NULL,);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 8
+mysql> CREATE TABLE `Order_Details` (   `Order_ID` int(11) NOT NULL,   `Customer_id` int(11) NOT NULL,   `Product_id` int(11) NOT NULL,   `Product_Name` varchar(50) NOT NULL,   `Product_Cost` int(11) NOT NULL,   `Product_Quantity` int(11) NOT NULL,   `Total_Cost` int(11) NOT NULL);
+Query OK, 0 rows affected (0.32 sec)
+
+mysql> desc Order_Details;
++------------------+-------------+------+-----+---------+-------+
+| Field            | Type        | Null | Key | Default | Extra |
++------------------+-------------+------+-----+---------+-------+
+| Order_ID         | int(11)     | NO   |     | NULL    |       |
+| Customer_id      | int(11)     | NO   |     | NULL    |       |
+| Product_id       | int(11)     | NO   |     | NULL    |       |
+| Product_Name     | varchar(50) | NO   |     | NULL    |       |
+| Product_Cost     | int(11)     | NO   |     | NULL    |       |
+| Product_Quantity | int(11)     | NO   |     | NULL    |       |
+| Total_Cost       | int(11)     | NO   |     | NULL    |       |
++------------------+-------------+------+-----+---------+-------+
+7 rows in set (0.00 sec)
+
+mysql> drop Order_Details;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Order_Details' at line 1
+mysql> drop table Order_Details;
+Query OK, 0 rows affected (0.21 sec)
+
+mysql> CREATE TABLE `Order_Details` (   `Order_ID` int(11) NOT NULL,  `Product_id` int(11) NOT NULL,   `Product_Name` varchar(50) NOT NULL,   `Product_Cost` int(11) NOT NULL,   `Product_Quantity` int(11) NOT NULL,   `Total_Cost` int(11) NOT NULL);
+Query OK, 0 rows affected (0.26 sec)
+
+mysql> desc Order_Details;
++------------------+-------------+------+-----+---------+-------+
+| Field            | Type        | Null | Key | Default | Extra |
++------------------+-------------+------+-----+---------+-------+
+| Order_ID         | int(11)     | NO   |     | NULL    |       |
+| Product_id       | int(11)     | NO   |     | NULL    |       |
+| Product_Name     | varchar(50) | NO   |     | NULL    |       |
+| Product_Cost     | int(11)     | NO   |     | NULL    |       |
+| Product_Quantity | int(11)     | NO   |     | NULL    |       |
+| Total_Cost       | int(11)     | NO   |     | NULL    |       |
++------------------+-------------+------+-----+---------+-------+
+6 rows in set (0.00 sec)
+
+mysql> alter table Order_Details foreign key Order__ID REFERENCES Record_Of_Order(O
+OCT                   ON                    OPEN                  OPTIONALLY            ORDER                 OrderManagement_33258 OUTFILE              
+OCTET_LENGTH          ONE                   OPTIMIZE              OR                    Order_ID              OUT                   OVERLAPS             
+OFFSET                ONE_SHOT              OPTION                ORD                   Order_Managment       OUTER                
+mysql> alter table Order_Details foreign key Order__ID REFERENCES Record_Of_Order(Order_ID);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'foreign key Order__ID REFERENCES Record_Of_Order(Order_ID)' at line 1
+mysql> alter table Order_Details add foreign key Order__ID REFERENCES Record_Of_Order(Order_ID); 
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'REFERENCES Record_Of_Order(Order_ID)' at line 1
+mysql> alter table Order_Details add foreign key Order_id REFERENCES Record_Of_Order(Order_ID);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'REFERENCES Record_Of_Order(Order_ID)' at line 1
+mysql> alter table Order_Details add foreign key (Order_id) REFERENCES Record_Of_Order(Order_ID);
+Query OK, 0 rows affected (0.62 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> alter table Order_Details add foreign key (product__id) REFERENCES Record_Of_Order(product_ID);
+ERROR 1072 (42000): Key column 'product__id' doesn't exist in table
+mysql> alter table Order_Details add foreign key (Product_id) REFERENCES Record_Of_Order(product_ID);
+ERROR 1215 (HY000): Cannot add foreign key constraint
+mysql> alter table Order_Details add foreign key (Product_id) REFERENCES Product(product_ID);
+Query OK, 0 rows affected (0.65 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> desc Record_Of_Order;
++-------------+--------------+------+-----+---------+----------------+
+| Field       | Type         | Null | Key | Default | Extra          |
++-------------+--------------+------+-----+---------+----------------+
+| Order_ID    | int(11)      | NO   | PRI | NULL    | auto_increment |
+| Customer_id | int(11)      | NO   | MUL | NULL    |                |
+| Date        | date         | YES  |     | NULL    |                |
+| Address     | varchar(100) | YES  |     | NULL    |                |
++-------------+--------------+------+-----+---------+----------------+
+4 rows in set (0.00 sec)
+
+mysql> desc Order_Details;
++------------------+-------------+------+-----+---------+-------+
+| Field            | Type        | Null | Key | Default | Extra |
++------------------+-------------+------+-----+---------+-------+
+| Order_ID         | int(11)     | NO   | MUL | NULL    |       |
+| Product_id       | int(11)     | NO   | MUL | NULL    |       |
+| Product_Name     | varchar(50) | NO   |     | NULL    |       |
+| Product_Cost     | int(11)     | NO   |     | NULL    |       |
+| Product_Quantity | int(11)     | NO   |     | NULL    |       |
+| Total_Cost       | int(11)     | NO   |     | NULL    |       |
++------------------+-------------+------+-----+---------+-------+
+6 rows in set (0.00 sec)
+
+mysql> select * from Order_Details;
+Empty set (0.00 sec)
+
+mysql> insert into Order_Details 
+    -> (Product_id ,
+    -> Product_Name,
+    -> Product_Cost,
+    -> Product_Quantity,
+    -> Total_Cost) values
+    -> (1,5,
+    -> ( select Name from Product where Product_id=5),
+    -> (select Rate from Product where Product_id=5),
+    -> 3,
+    -> ((select Rate from Product where Product_id=5)*3));
+ERROR 1136 (21S01): Column count doesn't match value count at row 1
+mysql> insert into Order_Details  (Order_ID,Product_id , Product_Name, Product_Cost, Product_Quantity, Total_Cost) values (1,5, ( select Name from Product where Product_id=5), (select Rate from Product where Product_id=5), 3, ((select Rate from Product where Product_id=5)*3));
+Query OK, 1 row affected (0.04 sec)
+
+mysql> select * from Order_Details;
++----------+------------+--------------+--------------+------------------+------------+
+| Order_ID | Product_id | Product_Name | Product_Cost | Product_Quantity | Total_Cost |
++----------+------------+--------------+--------------+------------------+------------+
+|        1 |          5 | Ball         |           20 |                3 |         60 |
++----------+------------+--------------+--------------+------------------+------------+
+1 row in set (0.00 sec)
+
+mysql> insert into Order_Details  (Order_ID,Product_id , Product_Name, Product_Cost, Product_Quantity, Total_Cost) values (1,6, ( select Name from Product where Product_id=6), (select Rate from Product where Product_id=6), 3, ((select Rate from Product where Product_id=6)*3));
+Query OK, 1 row affected (0.03 sec)
+
+mysql> select * from Order_Details;                                                                                                                                     +----------+------------+--------------+--------------+------------------+------------+
+| Order_ID | Product_id | Product_Name | Product_Cost | Product_Quantity | Total_Cost |
++----------+------------+--------------+--------------+------------------+------------+
+|        1 |          5 | Ball         |           20 |                3 |         60 |
+|        1 |          6 | Bat          |          200 |                3 |        600 |
++----------+------------+--------------+--------------+------------------+------------+
+2 rows in set (0.00 sec)
+
+mysql> insert into 
+    -> ;
+;
+^C
+mysql> select * from Record_Of_Order;
++----------+-------------+------------+---------------------------+
+| Order_ID | Customer_id | Date       | Address                   |
++----------+-------------+------------+---------------------------+
+|        1 |           3 | 2019-07-23 | Kotharud Nasik Maharastra |
++----------+-------------+------------+---------------------------+
+1 row in set (0.00 sec)
+
+mysql> insert into Record_Of_Order (Order_ID , Customer_id , Date , Address ) values ( 2 , 5 , '2019-07-24',( select concat( Society , ' ' , City , ' ' , State) from Customer where Customer_id=5 )
+    -> insert into Record_Of_Order (Order_ID , Customer_id , Date , Address ) values ( 2 , 5 , '2019-07-24',( select concat( Society , ' ' , City , ' ' , State) from Customer where Customer_id=5 );
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'insert into Record_Of_Order (Order_ID , Customer_id , Date , Address ) values ( ' at line 2
+mysql> insert into Record_Of_Order (Order_ID , Customer_id , Date , Address ) values ( 2 , 5 , '2019-07-24',( select concat( Society , ' ' , City , ' ' , State) from Customer where Customer_id=5 ) insert into Record_Of_Order (Order_ID , Customer_id , Date , Address ) values ( 2 , 5 , '2019-07-24',( select concat( Society ' ' City ' ' State) from Customer where Customer_id=5 );
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'insert into Record_Of_Order (Order_ID , Customer_id , Date , Address ) values ( ' at line 1
+mysql> insert into Record_Of_Order (Order_ID , Customer_id , Date , Address ) values ( 2 , 5 , '2019-07-24',( select concat( Society , ' ' , City , ' ' , State) from Customer where Customer_id=5 );
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+mysql> insert into Record_Of_Order (Order_ID , Customer_id , Date , Address ) values ( 2 , 5 , '2019-07-24',( select concat( Society , ' ' , City , ' ' , State) from Customer where Customer_id=5 ));
+Query OK, 1 row affected (0.03 sec)
+
+mysql> select * from Record_Of_Order;
++----------+-------------+------------+------------------------------+
+| Order_ID | Customer_id | Date       | Address                      |
++----------+-------------+------------+------------------------------+
+|        1 |           3 | 2019-07-23 | Kotharud Nasik Maharastra    |
+|        2 |           5 | 2019-07-24 | ShivajiNagar Pune Maharastra |
++----------+-------------+------------+------------------------------+
+2 rows in set (0.00 sec)
+
+mysql> insert into Order_Details  (Order_ID,Product_id , Product_Name, Product_Cost, Product_Quantity, Total_Cost) values (2,1, ( select Name from Product where Product_id=1), (select Rate from Product where Product_id=1), 2, ((select Rate from Product where Product_id=1)*1));
+Query OK, 1 row affected (0.03 sec)
+
+mysql> select * from Order_Details;
++----------+------------+--------------+--------------+------------------+------------+
+| Order_ID | Product_id | Product_Name | Product_Cost | Product_Quantity | Total_Cost |
++----------+------------+--------------+--------------+------------------+------------+
+|        1 |          5 | Ball         |           20 |                3 |         60 |
+|        1 |          6 | Bat          |          200 |                3 |        600 |
+|        2 |          1 | Armspad      |         1200 |                2 |       1200 |
++----------+------------+--------------+--------------+------------------+------------+
+3 rows in set (0.00 sec)
+
+mysql> insert into Order_Details  (Order_ID,Product_id , Product_Name, Product_Cost, Product_Quantity, Total_Cost) values (3,6, ( select Name from Product where Product_id=6), (select Rate from Product where Product_id=6), 3, ((select Rate from Product where Product_id=6)*3));
+ERROR 1452 (23000): Cannot add or update a child row: a foreign key constraint fails (`Order_Managment`.`Order_Details`, CONSTRAINT `Order_Details_ibfk_1` FOREIGN KEY (`Order_ID`) REFERENCES `Record_Of_Order` (`Order_ID`))
+mysql> insert into Order_Details  (Order_ID,Product_id , Product_Name, Product_Cost, Product_Quantity, Total_Cost) values (2,1, ( select Name from Product where Product_id=1myinsert into
+mysql> desc Order_Details;
++------------------+-------------+------+-----+---------+-------+
+| Field            | Type        | Null | Key | Default | Extra |
++------------------+-------------+------+-----+---------+-------+
+| Order_ID         | int(11)     | NO   | MUL | NULL    |       |
+| Product_id       | int(11)     | NO   | MUL | NULL    |       |
+| Product_Name     | varchar(50) | NO   |     | NULL    |       |
+| Product_Cost     | int(11)     | NO   |     | NULL    |       |
+| Product_Quantity | int(11)     | NO   |     | NULL    |       |
+| Total_Cost       | int(11)     | NO   |     | NULL    |       |
++------------------+-------------+------+-----+---------+-------+
+6 rows in set (0.01 sec)
+
+mysql> select * from Order_Details;
++----------+------------+--------------+--------------+------------------+------------+
+| Order_ID | Product_id | Product_Name | Product_Cost | Product_Quantity | Total_Cost |
++----------+------------+--------------+--------------+------------------+------------+
+|        1 |          5 | Ball         |           20 |                3 |         60 |
+|        1 |          6 | Bat          |          200 |                3 |        600 |
+|        2 |          1 | Armspad      |         1200 |                2 |       1200 |
++----------+------------+--------------+--------------+------------------+------------+
+3 rows in set (0.00 sec)
+
+mysql> desc Record_Of_Order;
++-------------+--------------+------+-----+---------+----------------+
+| Field       | Type         | Null | Key | Default | Extra          |
++-------------+--------------+------+-----+---------+----------------+
+| Order_ID    | int(11)      | NO   | PRI | NULL    | auto_increment |
+| Customer_id | int(11)      | NO   | MUL | NULL    |                |
+| Date        | date         | YES  |     | NULL    |                |
+| Address     | varchar(100) | YES  |     | NULL    |                |
++-------------+--------------+------+-----+---------+----------------+
+4 rows in set (0.00 sec)
+
+mysql> select * from Record_Of_Order;
++----------+-------------+------------+------------------------------+
+| Order_ID | Customer_id | Date       | Address                      |
++----------+-------------+------------+------------------------------+
+|        1 |           3 | 2019-07-23 | Kotharud Nasik Maharastra    |
+|        2 |           5 | 2019-07-24 | ShivajiNagar Pune Maharastra |
++----------+-------------+------------+------------------------------+
+2 rows in set (0.00 sec)
+
+mysql> 
+
