@@ -1,0 +1,735 @@
+mllab04@mllab04:~$ sudo mysql -u root -p
+[sudo] password for mllab04: 
+Enter password: 
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 2
+Server version: 5.7.27-0ubuntu0.18.04.1 (Ubuntu)
+
+Copyright (c) 2000, 2019, Oracle and/or its affiliates. All rights reserved.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> source /home/mllab04/33313.sql;
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected, 1 warning (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+ERROR 1046 (3D000): No database selected
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+ERROR 1046 (3D000): No database selected
+Query OK, 0 rows affected (0.00 sec)
+
+ERROR 1046 (3D000): No database selected
+ERROR 1046 (3D000): No database selected
+ERROR 1046 (3D000): No database selected
+ERROR 1046 (3D000): No database selected
+Query OK, 0 rows affected (0.00 sec)
+
+ERROR 1046 (3D000): No database selected
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+ERROR 1046 (3D000): No database selected
+Query OK, 0 rows affected (0.00 sec)
+
+ERROR 1046 (3D000): No database selected
+ERROR 1046 (3D000): No database selected
+ERROR 1046 (3D000): No database selected
+ERROR 1046 (3D000): No database selected
+Query OK, 0 rows affected (0.00 sec)
+
+ERROR 1046 (3D000): No database selected
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+ERROR 1046 (3D000): No database selected
+Query OK, 0 rows affected (0.00 sec)
+
+ERROR 1046 (3D000): No database selected
+ERROR 1046 (3D000): No database selected
+ERROR 1046 (3D000): No database selected
+ERROR 1046 (3D000): No database selected
+Query OK, 0 rows affected (0.00 sec)
+
+ERROR 1046 (3D000): No database selected
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+ERROR 1046 (3D000): No database selected
+Query OK, 0 rows affected (0.00 sec)
+
+ERROR 1046 (3D000): No database selected
+ERROR 1046 (3D000): No database selected
+ERROR 1046 (3D000): No database selected
+ERROR 1046 (3D000): No database selected
+Query OK, 0 rows affected (0.00 sec)
+
+ERROR 1046 (3D000): No database selected
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+ERROR 1046 (3D000): No database selected
+Query OK, 0 rows affected (0.00 sec)
+
+ERROR 1046 (3D000): No database selected
+ERROR 1046 (3D000): No database selected
+ERROR 1046 (3D000): No database selected
+ERROR 1046 (3D000): No database selected
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected, 1 warning (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> use Order_Managment;
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Database changed
+mysql> source /home/mllab04/33313.sql;
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected, 1 warning (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.14 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.20 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 8 rows affected (0.04 sec)
+Records: 8  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.06 sec)
+
+Query OK, 0 rows affected (0.11 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.23 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 5 rows affected (0.03 sec)
+Records: 5  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.07 sec)
+
+Query OK, 0 rows affected (0.21 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.27 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 8 rows affected (0.03 sec)
+Records: 8  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.07 sec)
+
+Query OK, 0 rows affected (0.15 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.28 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 5 rows affected (0.03 sec)
+Records: 5  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.16 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.25 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 4 rows affected (0.02 sec)
+Records: 4  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.09 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected, 1 warning (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> show tables;
++---------------------------+
+| Tables_in_Order_Managment |
++---------------------------+
+| Category                  |
+| Customer                  |
+| Order_Details             |
+| Product                   |
+| Record_Of_Order           |
++---------------------------+
+5 rows in set (0.00 sec)
+
+mysql> select * from Order_Details;
++----------+------------+------------------+------+----------+
+| Order_id | Product_id | Product_Name     | Rate | Quantity |
++----------+------------+------------------+------+----------+
+|        1 |          1 | Armspad          | 1200 |        1 |
+|        1 |          3 | Swimming Costume |  999 |        2 |
+|        1 |          4 | Goggles          |  499 |        3 |
+|        2 |          1 | Armspad          | 1200 |        4 |
+|        2 |          5 | Ball             |   20 |        1 |
+|        2 |          6 | Bat              |  200 |        5 |
+|        4 |          1 | Armspad          | 1200 |       10 |
+|        4 |          3 | Swimming Costume |  999 |        7 |
++----------+------------+------------------+------+----------+
+8 rows in set (0.01 sec)
+
+mysql> select Order_id , sum( Rate * Quantity) as Total_Cost from Order_Details;
+ERROR 1140 (42000): In aggregated query without GROUP BY, expression #1 of SELECT list contains nonaggregated column 'Order_Managment.Order_Details.Order_id'; this is incompatible with sql_mode=only_full_group_by
+mysql> select Order_id , sum( Rate * Quantity) as Total_Cost group by Order_id from Order_
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'group by Order_id from Order_Details' at line 1
+mysql> select Order_id , sum( Rate * Quantity) as Total_Cost from Order_Details group by Order_id;
++----------+------------+
+| Order_id | Total_Cost |
++----------+------------+
+|        1 |       4695 |
+|        2 |       5820 |
+|        4 |      18993 |
++----------+------------+
+3 rows in set (0.01 sec)
+
+mysql> select T.Total_Cost from (select Order_id , sum( Rate * Quantity) as Total_Cost from Order_Details group by Order_id) as T;
++------------+
+| Total_Cost |
++------------+
+|       4695 |
+|       5820 |
+|      18993 |
++------------+
+3 rows in set (0.00 sec)
+
+mysql> select sum(T.Total_Cost) from (select Order_id , sum( Rate * Quantity) as Total_Cost from Order_Details group by Order_id) as T;
++-------------------+
+| sum(T.Total_Cost) |
++-------------------+
+|             29508 |
++-------------------+
+1 row in set (0.00 sec)
+
+mysql> select avg(T.Total_Cost) from (select Order_id , sum( Rate * Quantity) as Total_Cost from Order_Details group by Order_id) as T;
++-------------------+
+| avg(T.Total_Cost) |
++-------------------+
+|         9836.0000 |
++-------------------+
+1 row in set (0.00 sec)
+
+mysql> select * from Record_Of_Order;
++----------+-------------+------------+------------------------------+
+| Order_ID | Customer_id | Date       | Address                      |
++----------+-------------+------------+------------------------------+
+|        1 |           3 | 2019-07-23 | Kotharud Nasik Maharastra    |
+|        2 |           2 | 2019-07-29 | RaneNagar Pune Maharastra    |
+|        3 |           2 | 2019-07-30 | RaneNagar Pune Maharastra    |
+|        4 |           5 | 2019-07-31 | ShivajiNagar Pune Maharastra |
++----------+-------------+------------+------------------------------+
+4 rows in set (0.00 sec)
+
+mysql> select Date from Record_Of_Order where Date = '2019-07-31';
++------------+
+| Date       |
++------------+
+| 2019-07-31 |
++------------+
+1 row in set (0.00 sec)
+
+mysql> select Extract(month from (select Date from Record_Of_Order where Date = '2019-07-31'));
++----------------------------------------------------------------------------------+
+| Extract(month from (select Date from Record_Of_Order where Date = '2019-07-31')) |
++----------------------------------------------------------------------------------+
+|                                                                                7 |
++----------------------------------------------------------------------------------+
+1 row in set (0.00 sec)
+
+mysql> select Extract(month from (select Date from Record_Of_Order where Date = '2019-07-31') as Month);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as Month)' at line 1
+mysql> select Extract(month from (select Date from Record_Of_Order where Date = '2019-07-31') as m);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as m)' at line 1
+mysql> select Extract(month from (select Date from Record_Of_Order where Date = '2019-07-31'));
++----------------------------------------------------------------------------------+
+| Extract(month from (select Date from Record_Of_Order where Date = '2019-07-31')) |
++----------------------------------------------------------------------------------+
+|                                                                                7 |
++----------------------------------------------------------------------------------+
+1 row in set (0.00 sec)
+
+mysql> select Extract(month from (select Date from Record_Of_Order as T  where Date = '2019-07-31'));
++----------------------------------------------------------------------------------------+
+| Extract(month from (select Date from Record_Of_Order as T  where Date = '2019-07-31')) |
++----------------------------------------------------------------------------------------+
+|                                                                                      7 |
++----------------------------------------------------------------------------------------+
+1 row in set (0.00 sec)
+
+mysql> select * from Order_Details;
++----------+------------+------------------+------+----------+
+| Order_id | Product_id | Product_Name     | Rate | Quantity |
++----------+------------+------------------+------+----------+
+|        1 |          1 | Armspad          | 1200 |        1 |
+|        1 |          3 | Swimming Costume |  999 |        2 |
+|        1 |          4 | Goggles          |  499 |        3 |
+|        2 |          1 | Armspad          | 1200 |        4 |
+|        2 |          5 | Ball             |   20 |        1 |
+|        2 |          6 | Bat              |  200 |        5 |
+|        4 |          1 | Armspad          | 1200 |       10 |
+|        4 |          3 | Swimming Costume |  999 |        7 |
++----------+------------+------------------+------+----------+
+8 rows in set (0.01 sec)
+
+mysql> select * from Record_Of_Order;
++----------+-------------+------------+------------------------------+
+| Order_ID | Customer_id | Date       | Address                      |
++----------+-------------+------------+------------------------------+
+|        1 |           3 | 2019-07-23 | Kotharud Nasik Maharastra    |
+|        2 |           2 | 2019-07-29 | RaneNagar Pune Maharastra    |
+|        3 |           2 | 2019-07-30 | RaneNagar Pune Maharastra    |
+|        4 |           5 | 2019-07-31 | ShivajiNagar Pune Maharastra |
++----------+-------------+------------+------------------------------+
+4 rows in set (0.01 sec)
+
+mysql> select Date from Record_Of_Order where month(dob) =07
+    -> ;
+ERROR 1054 (42S22): Unknown column 'dob' in 'where clause'
+mysql> desc R
+RADIANS                     Record_Of_Order.Date        RELEASE                     REQUIRE                     RIGHT                       ROWS                       
+RAND                        Record_Of_Order.Order_ID    RELEASE_LOCK                RESET                       RLIKE                       RPAD                       
+Rate                        RECOVER                     RELOAD                      RESTORE                     ROLLBACK                    RTREE                      
+READ                        REDUNDANT                   RENAME                      RESTRICT                    ROLLUP                      RTRIM                      
+READS                       REFERENCES                  REPAIR                      RESUME                      ROUND                      
+REAL                        REGEXP                      REPEAT                      RETURN                      ROUTINE                    
+Record_Of_Order             RELAY_LOG_FILE              REPEATABLE                  RETURNS                     ROW                        
+Record_Of_Order.Address     RELAY_LOG_POS               REPLACE                     REVERSE                     ROW_COUNT                  
+Record_Of_Order.Customer_id RELAY_THREAD                REPLICATION                 REVOKE                      ROW_FORMAT                 
+mysql> desc Record_Of_Order;
++-------------+--------------+------+-----+---------+----------------+
+| Field       | Type         | Null | Key | Default | Extra          |
++-------------+--------------+------+-----+---------+----------------+
+| Order_ID    | int(11)      | NO   | PRI | NULL    | auto_increment |
+| Customer_id | int(11)      | NO   | MUL | NULL    |                |
+| Date        | date         | YES  |     | NULL    |                |
+| Address     | varchar(100) | YES  |     | NULL    |                |
++-------------+--------------+------+-----+---------+----------------+
+4 rows in set (0.00 sec)
+
+mysql> select Date from Record_Of_Order where month(Date) =07
+    -> ;
++------------+
+| Date       |
++------------+
+| 2019-07-23 |
+| 2019-07-29 |
+| 2019-07-30 |
+| 2019-07-31 |
++------------+
+4 rows in set (0.00 sec)
+
+mysql> select Extract(month from (select Date from Record_Of_Order where Date = '2019-07-31' as T));
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as T))' at line 1
+mysql> select Extract(month from (select Date from Record_Of_Order where Date = '2019-07-31' )) as T;
++------+
+| T    |
++------+
+|    7 |
++------+
+1 row in set (0.00 sec)
+
+mysql> select Extract(month from (select Date from Record_Of_Order where Date = '2019-07-31' )) as Month;
++-------+
+| Month |
++-------+
+|     7 |
++-------+
+1 row in set (0.00 sec)
+
+mysql> select Extract(month from (select Date from Record_Of_Order as T  where Date = '2019-07-31'));
++----------------------------------------------------------------------------------------+
+| Extract(month from (select Date from Record_Of_Order as T  where Date = '2019-07-31')) |
++----------------------------------------------------------------------------------------+
+|                                                                                      7 |
++----------------------------------------------------------------------------------------+
+1 row in set (0.00 sec)
+
+mysql> select Extract(month from (select Date from Record_Of_Order as T  where Date = '2019-07-31')) as Month;
++-------+
+| Month |
++-------+
+|     7 |
++-------+
+1 row in set (0.00 sec)
+
+mysql> select curdate();
++------------+
+| curdate()  |
++------------+
+| 2019-07-29 |
++------------+
+1 row in set (0.00 sec)
+
+mysql> select curdate() as Today Date;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Date' at line 1
+mysql> select curdate() as Today_Date;
++------------+
+| Today_Date |
++------------+
+| 2019-07-29 |
++------------+
+1 row in set (0.00 sec)
+
+mysql> select Date_add( select curdate() as Today_Date , interval 6 month ) interval 6 month;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'select curdate() as Today_Date , interval 6 month ) interval 6 month' at line 1
+mysql> select Date_add( select curdate() as Today_Date , interval 6 month );
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'select curdate() as Today_Date , interval 6 month )' at line 1
+mysql> select Date_add( select curdate(), interval 6 month );
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'select curdate(), interval 6 month )' at line 1
+mysql> select Date_Add( (select curdate()), interval 6 month );
++--------------------------------------------------+
+| Date_Add( (select curdate()), interval 6 month ) |
++--------------------------------------------------+
+| 2020-01-29                                       |
++--------------------------------------------------+
+1 row in set (0.00 sec)
+
+mysql> select Date_Add( (select curdate()), interval 6 month ) 6_Month_Later;
++---------------+
+| 6_Month_Later |
++---------------+
+| 2020-01-29    |
++---------------+
+1 row in set (0.00 sec)
+
+mysql> select Date_Add( (select curdate()), interval 6 month ) 6_Month_Later
+    -> ,
+    -> select Date_Sub ( Select curdate()),interval 6 month ) 6_Month_Before;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'select Date_Sub ( Select curdate()),interval 6 month ) 6_Month_Before' at line 3
+mysql> select Date_Add( (select curdate()), interval 6 month ) 6_Month_Later;
++---------------+
+| 6_Month_Later |
++---------------+
+| 2020-01-29    |
++---------------+
+1 row in set (0.00 sec)
+
+mysql> select Date_Sub ( Select curdate()),interval 6 month ) 6_Month_Before;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Select curdate()),interval 6 month ) 6_Month_Before' at line 1
+mysql> select Date_Sub ( Select curdate()),interval 6 month )6_Month_Before;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Select curdate()),interval 6 month )6_Month_Before' at line 1
+mysql> select Date_Add( (select curdate()), interval 6 month ) 6_Month_Later
+    -> ;
++---------------+
+| 6_Month_Later |
++---------------+
+| 2020-01-29    |
++---------------+
+1 row in set (0.00 sec)
+
+mysql> select Date_sub( (select curdate()), interval 6 month ) 6_Month_Later
+    -> ;
++---------------+
+| 6_Month_Later |
++---------------+
+| 2019-01-29    |
++---------------+
+1 row in set (0.00 sec)
+
+mysql> select Date_sub( (select curdate()), interval 6 month ) 6_Month_Before;
++----------------+
+| 6_Month_Before |
++----------------+
+| 2019-01-29     |
++----------------+
+1 row in set (0.00 sec)
+
+mysql> select Date_sub( (select curdate()), interval 6 month ) 6_Month_Before , Date_Add((select curdate()), interval 6 month )6_Month_Later;
++----------------+---------------+
+| 6_Month_Before | 6_Month_Later |
++----------------+---------------+
+| 2019-01-29     | 2020-01-29    |
++----------------+---------------+
+1 row in set (0.00 sec)
+
+mysql> select (select curdate()) ,  Date_sub( (select curdate()), interval 6 month ) 6_Month_Before , Date_Add((select curdate()), interval 6 month )6_Month_Later;
++--------------------+----------------+---------------+
+| (select curdate()) | 6_Month_Before | 6_Month_Later |
++--------------------+----------------+---------------+
+| 2019-07-29         | 2019-01-29     | 2020-01-29    |
++--------------------+----------------+---------------+
+1 row in set (0.00 sec)
+
+mysql> select (select curdate()) Today ,  Date_sub( (select curdate()), interval 6 month ) 6_Month_Before , Date_Add((select curdate()), interval 6 month )6_Month_Later;
++------------+----------------+---------------+
+| Today      | 6_Month_Before | 6_Month_Later |
++------------+----------------+---------------+
+| 2019-07-29 | 2019-01-29     | 2020-01-29    |
++------------+----------------+---------------+
+1 row in set (0.00 sec)
+
+mysql> select * from Order_Details group by Product_id;
+ERROR 1055 (42000): Expression #1 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'Order_Managment.Order_Details.Order_id' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by
+mysql> select * from Order_Details;
++----------+------------+------------------+------+----------+
+| Order_id | Product_id | Product_Name     | Rate | Quantity |
++----------+------------+------------------+------+----------+
+|        1 |          1 | Armspad          | 1200 |        1 |
+|        1 |          3 | Swimming Costume |  999 |        2 |
+|        1 |          4 | Goggles          |  499 |        3 |
+|        2 |          1 | Armspad          | 1200 |        4 |
+|        2 |          5 | Ball             |   20 |        1 |
+|        2 |          6 | Bat              |  200 |        5 |
+|        4 |          1 | Armspad          | 1200 |       10 |
+|        4 |          3 | Swimming Costume |  999 |        7 |
++----------+------------+------------------+------+----------+
+8 rows in set (0.00 sec)
+
+mysql> select * from Order_Details group by Product_id;
+ERROR 1055 (42000): Expression #1 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'Order_Managment.Order_Details.Order_id' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by
+mysql> select avg(T.Total_Cost) from (select Order_id , sum( Rate * Quantity) as Total_Cost from Order_Details group by Order_id) as T;
++-------------------+
+| avg(T.Total_Cost) |
++-------------------+
+|         9836.0000 |
++-------------------+
+1 row in set (0.00 sec)
+
+mysql> select Order_id , sum( Rate * Quantity) as Total_Cost from Order_Details group by Order_id;
++----------+------------+
+| Order_id | Total_Cost |
++----------+------------+
+|        1 |       4695 |
+|        2 |       5820 |
+|        4 |      18993 |
++----------+------------+
+3 rows in set (0.00 sec)
+
+mysql> select * from Product;
++------------+------------------+------+-------+-------------+
+| Product_id | Name             | Rate | Stock | Category_id |
++------------+------------------+------+-------+-------------+
+|          1 | Armspad          | 1200 |     5 |           2 |
+|          3 | Swimming Costume |  999 |     7 |           2 |
+|          4 | Goggles          |  499 |    10 |           2 |
+|          5 | Ball             |   20 |    50 |           3 |
+|          6 | Bat              |  200 |    10 |           3 |
++------------+------------------+------+-------+-------------+
+5 rows in set (0.00 sec)
+
+mysql> desc Order_Details;
++--------------+-------------+------+-----+---------+-------+
+| Field        | Type        | Null | Key | Default | Extra |
++--------------+-------------+------+-----+---------+-------+
+| Order_id     | int(11)     | NO   | PRI | NULL    |       |
+| Product_id   | int(11)     | NO   | PRI | NULL    |       |
+| Product_Name | varchar(50) | NO   |     | NULL    |       |
+| Rate         | int(11)     | NO   |     | NULL    |       |
+| Quantity     | int(11)     | NO   |     | NULL    |       |
++--------------+-------------+------+-----+---------+-------+
+5 rows in set (0.00 sec)
+
+mysql> desc Pr
+Practice            Product.Category_id Product.Product_id  Product.Stock       Product_id          Product_Quantity   
+Product             Product.Name        Product.Rate        Product_Cost        Product_Name       
+mysql> desc Product;
++-------------+-------------+------+-----+---------+----------------+
+| Field       | Type        | Null | Key | Default | Extra          |
++-------------+-------------+------+-----+---------+----------------+
+| Product_id  | int(11)     | NO   | PRI | NULL    | auto_increment |
+| Name        | varchar(50) | NO   |     | NULL    |                |
+| Rate        | int(11)     | NO   |     | NULL    |                |
+| Stock       | int(11)     | NO   |     | NULL    |                |
+| Category_id | int(11)     | YES  | MUL | NULL    |                |
++-------------+-------------+------+-----+---------+----------------+
+5 rows in set (0.00 sec)
+
+mysql> select * from Order_Details where Pr
+Practice            Product.Category_id Product.Product_id  Product.Stock       Product_id          Product_Quantity   
+Product             Product.Name        Product.Rate        Product_Cost        Product_Name       
+mysql> select * from Order_Details where Product_id in (select Product_id from Product where Category = 1
+    -> group by Product_id;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 2
+mysql> select * from Order_Details where Product_id in (select Product_id from Product where (Category = 1) group by Product_id;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+mysql> select * from Order_Details where Product_id in (select Product_id from Product where (Category = 1) group by Product_id);
+ERROR 1054 (42S22): Unknown column 'Category' in 'where clause'
+mysql> select * from Order_Details where Product_id in (select Product_id from Product where (Category_id = 1) group by Product_id);
+Empty set (0.00 sec)
+
+mysql> select * from Order_Details where Product_id in (select Product_id from Product where (Category_id = 2) group by Product_id);
++----------+------------+------------------+------+----------+
+| Order_id | Product_id | Product_Name     | Rate | Quantity |
++----------+------------+------------------+------+----------+
+|        1 |          1 | Armspad          | 1200 |        1 |
+|        2 |          1 | Armspad          | 1200 |        4 |
+|        4 |          1 | Armspad          | 1200 |       10 |
+|        1 |          3 | Swimming Costume |  999 |        2 |
+|        4 |          3 | Swimming Costume |  999 |        7 |
+|        1 |          4 | Goggles          |  499 |        3 |
++----------+------------+------------------+------+----------+
+6 rows in set (0.00 sec)
+
+mysql> select * from Order_Details where Product_id in (select Product_id from Product where (Category_id = 3) group by Product_id);
++----------+------------+--------------+------+----------+
+| Order_id | Product_id | Product_Name | Rate | Quantity |
++----------+------------+--------------+------+----------+
+|        2 |          5 | Ball         |   20 |        1 |
+|        2 |          6 | Bat          |  200 |        5 |
++----------+------------+--------------+------+----------+
+2 rows in set (0.00 sec)
+
+mysql> select * from Order_Details;
++----------+------------+------------------+------+----------+
+| Order_id | Product_id | Product_Name     | Rate | Quantity |
++----------+------------+------------------+------+----------+
+|        1 |          1 | Armspad          | 1200 |        1 |
+|        1 |          3 | Swimming Costume |  999 |        2 |
+|        1 |          4 | Goggles          |  499 |        3 |
+|        2 |          1 | Armspad          | 1200 |        4 |
+|        2 |          5 | Ball             |   20 |        1 |
+|        2 |          6 | Bat              |  200 |        5 |
+|        4 |          1 | Armspad          | 1200 |       10 |
+|        4 |          3 | Swimming Costume |  999 |        7 |
++----------+------------+------------------+------+----------+
+8 rows in set (0.00 sec)
+
+mysql> select * from Order_Details where Product_id in (select Product_id from Product where (Category_id = 3) group by Product_id);
++----------+------------+--------------+------+----------+
+| Order_id | Product_id | Product_Name | Rate | Quantity |
++----------+------------+--------------+------+----------+
+|        2 |          5 | Ball         |   20 |        1 |
+|        2 |          6 | Bat          |  200 |        5 |
++----------+------------+--------------+------+----------+
+2 rows in set (0.00 sec)
+
+mysql> select * from Product;
++------------+------------------+------+-------+-------------+
+| Product_id | Name             | Rate | Stock | Category_id |
++------------+------------------+------+-------+-------------+
+|          1 | Armspad          | 1200 |     5 |           2 |
+|          3 | Swimming Costume |  999 |     7 |           2 |
+|          4 | Goggles          |  499 |    10 |           2 |
+|          5 | Ball             |   20 |    50 |           3 |
+|          6 | Bat              |  200 |    10 |           3 |
++------------+------------------+------+-------+-------------+
+5 rows in set (0.00 sec)
+
+mysql> select * from Categor;
+ERROR 1146 (42S02): Table 'Order_Managment.Categor' doesn't exist
+mysql> 
