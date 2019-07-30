@@ -35,7 +35,7 @@ CREATE TABLE `Category` (
 
 LOCK TABLES `Category` WRITE;
 /*!40000 ALTER TABLE `Category` DISABLE KEYS */;
-INSERT INTO `Category` VALUES ('Cricket',1),('Swimming',2),('Cricket',3),('Football',4),('Basketball',5),('Badminton',6),('Long Tennis',7),('Water Polo',8);
+INSERT INTO `Category` VALUES ('Swimming',2),('Cricket',3),('Football',4),('Basketball',5),('Badminton',6),('Long Tennis',7),('Water Polo',8);
 /*!40000 ALTER TABLE `Category` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -77,22 +77,15 @@ DROP TABLE IF EXISTS `Order_Details`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `Order_Details` (
-  `Order_ID` int(11) NOT NULL,
-  `Customer_id` int(11) NOT NULL,
+  `Order_id` int(11) NOT NULL,
   `Product_id` int(11) NOT NULL,
   `Product_Name` varchar(50) NOT NULL,
-  `Product_Cost` int(11) NOT NULL,
-  `Product_Quantity` int(11) NOT NULL,
-  `Total_Cost` int(11) NOT NULL,
-  KEY `Order_Details` (`Order_ID`),
-  KEY `Product` (`Product_id`),
-  KEY `Customer` (`Customer_id`),
-  CONSTRAINT `Order_Details_ibfk_1` FOREIGN KEY (`Customer_id`) REFERENCES `Customer` (`Customer_id`) ON DELETE NO ACTION ON UPDATE CASCADE,
-  CONSTRAINT `Order_Details_ibfk_2` FOREIGN KEY (`Product_id`) REFERENCES `Product` (`Product_id`) ON DELETE NO ACTION ON UPDATE CASCADE,
-  CONSTRAINT `Order_Details_ibfk_3` FOREIGN KEY (`Order_ID`) REFERENCES `Record_Of_Order` (`Order_ID`) ON DELETE NO ACTION ON UPDATE CASCADE,
-  CONSTRAINT `Order_Details_ibfk_4` FOREIGN KEY (`Product_id`) REFERENCES `Product` (`Product_id`) ON DELETE NO ACTION ON UPDATE CASCADE,
-  CONSTRAINT `Order_Details_ibfk_5` FOREIGN KEY (`Product_id`) REFERENCES `Product` (`Product_id`) ON DELETE NO ACTION ON UPDATE CASCADE,
-  CONSTRAINT `Order_Details_ibfk_6` FOREIGN KEY (`Customer_id`) REFERENCES `Customer` (`Customer_id`) ON DELETE NO ACTION ON UPDATE CASCADE
+  `Rate` int(11) NOT NULL,
+  `Quantity` int(11) NOT NULL,
+  PRIMARY KEY (`Order_id`,`Product_id`),
+  KEY `Product_ID` (`Product_id`),
+  CONSTRAINT `Order_Details_ibfk_1` FOREIGN KEY (`Order_id`) REFERENCES `Record_Of_Order` (`Order_ID`),
+  CONSTRAINT `Order_Details_ibfk_2` FOREIGN KEY (`Product_id`) REFERENCES `Product` (`Product_id`) ON DELETE NO ACTION ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -102,7 +95,7 @@ CREATE TABLE `Order_Details` (
 
 LOCK TABLES `Order_Details` WRITE;
 /*!40000 ALTER TABLE `Order_Details` DISABLE KEYS */;
-INSERT INTO `Order_Details` VALUES (1,3,3,'Swimming Costume',999,2,0),(1,3,3,'Swimming Costume',999,2,1998);
+INSERT INTO `Order_Details` VALUES (1,1,'Armspad',1200,1),(1,3,'Swimming Costume',999,2),(1,4,'Goggles',499,3),(2,1,'Armspad',1200,4),(2,5,'Ball',20,1),(2,6,'Bat',200,5),(4,1,'Armspad',1200,10),(4,3,'Swimming Costume',999,7);
 /*!40000 ALTER TABLE `Order_Details` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -150,7 +143,7 @@ CREATE TABLE `Record_Of_Order` (
   PRIMARY KEY (`Order_ID`),
   KEY `Customer_ID` (`Customer_id`),
   CONSTRAINT `Record_Of_Order_ibfk_1` FOREIGN KEY (`Customer_id`) REFERENCES `Customer` (`Customer_id`) ON DELETE NO ACTION ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -159,7 +152,7 @@ CREATE TABLE `Record_Of_Order` (
 
 LOCK TABLES `Record_Of_Order` WRITE;
 /*!40000 ALTER TABLE `Record_Of_Order` DISABLE KEYS */;
-INSERT INTO `Record_Of_Order` VALUES (1,3,'2019-07-23','Kotharud Nasik Maharastra');
+INSERT INTO `Record_Of_Order` VALUES (1,3,'2019-07-23','Kotharud Nasik Maharastra'),(2,2,'2019-07-29','RaneNagar Pune Maharastra'),(3,2,'2019-07-30','RaneNagar Pune Maharastra'),(4,5,'2019-07-31','ShivajiNagar Pune Maharastra');
 /*!40000 ALTER TABLE `Record_Of_Order` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -172,4 +165,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-07-24  8:24:36
+-- Dump completed on 2019-07-31  2:24:01
